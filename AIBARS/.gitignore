@@ -1,0 +1,11 @@
+/build/
+/runs/
+__pycache__/
+*.pyc
+.venv/
+venv/
+artifacts/tmp/
+runs/live/
+build-*/
+dist/
+*.log

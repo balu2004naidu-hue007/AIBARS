@@ -1,0 +1,11 @@
+{
+  "scenario": "multiple_faults",
+  "terminal_state": "SAFE_MODE",
+  "primary_cause": "COMPOUND_FAULT",
+  "recovery_action": "ENTER_SAFE_MODE",
+  "recovery_status": "SAFE_MODE_ENTERED",
+  "recovery_attempts": 0,
+  "verified_cycles": 0,
+  "total_ticks": 5,
+  "detected_faults": ["SENSOR_OUT_OF_RANGE", "COMMUNICATION_TIMEOUT"]
+}

@@ -1,0 +1,11 @@
+{
+  "scenario": "nominal",
+  "terminal_state": "NORMAL",
+  "primary_cause": "NO_FAULT_DETECTED",
+  "recovery_action": "NONE",
+  "recovery_status": "NOT_REQUIRED",
+  "recovery_attempts": 0,
+  "verified_cycles": 0,
+  "total_ticks": 30,
+  "detected_faults": []
+}

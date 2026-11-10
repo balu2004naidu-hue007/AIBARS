@@ -1,0 +1,11 @@
+{
+  "scenario": "sensor_out_of_range",
+  "terminal_state": "NORMAL",
+  "primary_cause": "SENSOR_VALUE_OUT_OF_RANGE",
+  "recovery_action": "QUARANTINE_SENSOR",
+  "recovery_status": "VERIFIED",
+  "recovery_attempts": 1,
+  "verified_cycles": 3,
+  "total_ticks": 8,
+  "detected_faults": ["SENSOR_OUT_OF_RANGE"]
+}

@@ -1,0 +1,11 @@
+{
+  "scenario": "sensor_stuck",
+  "terminal_state": "NORMAL",
+  "primary_cause": "SENSOR_STUCK_AT",
+  "recovery_action": "REINITIALIZE_SENSOR",
+  "recovery_status": "VERIFIED",
+  "recovery_attempts": 1,
+  "verified_cycles": 3,
+  "total_ticks": 12,
+  "detected_faults": ["SENSOR_STUCK"]
+}

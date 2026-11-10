@@ -1,0 +1,11 @@
+{
+  "episode": 1,
+  "scenario": "communication_timeout",
+  "primary_cause": "COMMUNICATION_HEARTBEAT_TIMEOUT",
+  "terminal_state": "NORMAL",
+  "recovery_status": "VERIFIED",
+  "recovery_attempts": 1,
+  "verified_cycles": 3,
+  "start_tick": 23,
+  "end_tick": 32
+}

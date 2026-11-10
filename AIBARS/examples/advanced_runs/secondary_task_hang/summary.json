@@ -1,0 +1,11 @@
+{
+  "scenario": "secondary_task_hang",
+  "terminal_state": "NORMAL",
+  "primary_cause": "TASK_PROGRESS_FAILURE",
+  "recovery_action": "RESTART_TASK",
+  "recovery_status": "VERIFIED",
+  "recovery_attempts": 1,
+  "verified_cycles": 3,
+  "total_ticks": 10,
+  "detected_faults": ["TASK_HANG"]
+}

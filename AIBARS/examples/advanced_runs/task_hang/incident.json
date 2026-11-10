@@ -1,0 +1,37 @@
+{
+  "primary_cause": "TASK_PROGRESS_FAILURE",
+  "severity": "HIGH",
+  "rule_match_score": 0.95,
+  "rationale": "The task progress indicator has not advanced within the configured monitoring window; restart the simulated task.",
+  "recommended_action": "RESTART_TASK",
+  "terminal_state": "NORMAL",
+  "recovery_status": "VERIFIED",
+  "recovery_explanation": "Recovery passed 3 consecutive healthy verification cycles.",
+  "recovery_attempts": 1,
+  "verified_cycles": 3,
+  "faults": [
+    {"code": "TASK_HANG", "severity": "HIGH", "evidence": "task=PRIMARY_CONTROL_LOOP progress stalled for 3 ticks, threshold=3 ticks"}
+  ],
+  "recent_events": [
+    {"sequence":1,"tick":0,"component":"supervisor","event":"run_started","detail":"scenario=task_hang"},
+    {"sequence":2,"tick":1,"component":"telemetry","event":"sample_observed","detail":"temperature=34.350000 C, voltage=24.080000 V, current=4.120000 A, temperature_age=0 ticks, communication_age=0 ticks, communication_ok=true, primary_task_progressing=true, primary_task_stall=0 ticks, secondary_task_progressing=true, secondary_task_stall=0 ticks"},
+    {"sequence":3,"tick":2,"component":"telemetry","event":"sample_observed","detail":"temperature=34.700000 C, voltage=24.160000 V, current=4.240000 A, temperature_age=0 ticks, communication_age=0 ticks, communication_ok=true, primary_task_progressing=true, primary_task_stall=0 ticks, secondary_task_progressing=true, secondary_task_stall=0 ticks"},
+    {"sequence":4,"tick":3,"component":"telemetry","event":"sample_observed","detail":"temperature=35.050000 C, voltage=24.240000 V, current=4.360000 A, temperature_age=0 ticks, communication_age=0 ticks, communication_ok=true, primary_task_progressing=true, primary_task_stall=0 ticks, secondary_task_progressing=true, secondary_task_stall=0 ticks"},
+    {"sequence":5,"tick":4,"component":"telemetry","event":"sample_observed","detail":"temperature=35.400000 C, voltage=24.320000 V, current=4.480000 A, temperature_age=0 ticks, communication_age=0 ticks, communication_ok=true, primary_task_progressing=true, primary_task_stall=0 ticks, secondary_task_progressing=true, secondary_task_stall=0 ticks"},
+    {"sequence":6,"tick":5,"component":"fault_injector","event":"fault_injected","detail":"scenario=task_hang"},
+    {"sequence":7,"tick":5,"component":"telemetry","event":"sample_observed","detail":"temperature=35.750000 C, voltage=24.000000 V, current=4.600000 A, temperature_age=0 ticks, communication_age=0 ticks, communication_ok=true, primary_task_progressing=false, primary_task_stall=1 ticks, secondary_task_progressing=true, secondary_task_stall=0 ticks"},
+    {"sequence":8,"tick":6,"component":"telemetry","event":"sample_observed","detail":"temperature=36.100000 C, voltage=24.080000 V, current=4.720000 A, temperature_age=0 ticks, communication_age=0 ticks, communication_ok=true, primary_task_progressing=false, primary_task_stall=2 ticks, secondary_task_progressing=true, secondary_task_stall=0 ticks"},
+    {"sequence":9,"tick":7,"component":"telemetry","event":"sample_observed","detail":"temperature=36.450000 C, voltage=24.160000 V, current=4.000000 A, temperature_age=0 ticks, communication_age=0 ticks, communication_ok=true, primary_task_progressing=false, primary_task_stall=3 ticks, secondary_task_progressing=true, secondary_task_stall=0 ticks"},
+    {"sequence":10,"tick":7,"component":"fault_detector","event":"fault_detected","detail":"TASK_HANG | task=PRIMARY_CONTROL_LOOP progress stalled for 3 ticks, threshold=3 ticks"},
+    {"sequence":11,"tick":7,"component":"diagnosis","event":"diagnosis_completed","detail":"TASK_PROGRESS_FAILURE | The task progress indicator has not advanced within the configured monitoring window; restart the simulated task."},
+    {"sequence":12,"tick":7,"component":"recovery","event":"recovery_attempt_started","detail":"attempt=1, action=RESTART_TASK"},
+    {"sequence":13,"tick":8,"component":"verification","event":"health_sample","detail":"temperature=36.8 C, voltage=24.24 V, current=4.12 A"},
+    {"sequence":14,"tick":8,"component":"verification","event":"healthy_cycle","detail":"consecutive healthy cycle 1 of 3"},
+    {"sequence":15,"tick":9,"component":"verification","event":"health_sample","detail":"temperature=34 C, voltage=24.32 V, current=4.24 A"},
+    {"sequence":16,"tick":9,"component":"verification","event":"healthy_cycle","detail":"consecutive healthy cycle 2 of 3"},
+    {"sequence":17,"tick":10,"component":"verification","event":"health_sample","detail":"temperature=34.35 C, voltage=24 V, current=4.36 A"},
+    {"sequence":18,"tick":10,"component":"verification","event":"healthy_cycle","detail":"consecutive healthy cycle 3 of 3"},
+    {"sequence":19,"tick":10,"component":"recovery","event":"recovery_verified","detail":"Recovery passed 3 consecutive healthy verification cycles."},
+    {"sequence":20,"tick":10,"component":"supervisor","event":"run_completed","detail":"terminal_state=NORMAL, recovery=VERIFIED"}
+  ]
+}

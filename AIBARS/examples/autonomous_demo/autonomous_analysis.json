@@ -1,0 +1,3578 @@
+{
+  "status": {
+    "session_state": "COMPLETED",
+    "device_id": "AIBARS-AUTO-ECU-01",
+    "session_cycles": 71,
+    "maximum_cycles": 80,
+    "incidents": 3,
+    "maximum_incidents": 3,
+    "verified_recoveries": 3,
+    "safe_mode_entries": 0,
+    "current_scenario": "task_hang",
+    "global_tick": 103,
+    "temperature_c": 35.4,
+    "voltage_v": 24.24,
+    "current_a": 4.6,
+    "communication_ok": true,
+    "primary_task_progressing": true,
+    "secondary_task_progressing": true,
+    "seed": 20261110,
+    "next_fault_cycle": 93,
+    "cycles_until_next_fault": 22,
+    "next_fault_in_seconds": 2.2,
+    "fault_interval_min_cycles": 20,
+    "fault_interval_max_cycles": 25,
+    "tick_delay_ms": 100,
+    "interval_mode": "RANDOM",
+    "fault_interval_min_seconds": 2.0,
+    "fault_interval_max_seconds": 2.5
+  },
+  "summary": {
+    "session_state": "COMPLETED",
+    "device_id": "AIBARS-AUTO-ECU-01",
+    "session_cycles": 71,
+    "global_ticks": 103,
+    "incidents": 3,
+    "verified_recoveries": 3,
+    "safe_mode_entries": 0,
+    "seed": 20261110,
+    "interval_mode": "RANDOM",
+    "fault_interval_min_cycles": 20,
+    "fault_interval_max_cycles": 25,
+    "tick_delay_ms": 100,
+    "fault_interval_min_seconds": 2,
+    "fault_interval_max_seconds": 2.5,
+    "episodes": [
+      {
+        "episode": 1,
+        "scenario": "communication_timeout",
+        "primary_cause": "COMMUNICATION_HEARTBEAT_TIMEOUT",
+        "terminal_state": "NORMAL",
+        "recovery_status": "VERIFIED",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "start_tick": 23,
+        "end_tick": 32
+      },
+      {
+        "episode": 2,
+        "scenario": "sensor_stuck",
+        "primary_cause": "SENSOR_STUCK_AT",
+        "terminal_state": "NORMAL",
+        "recovery_status": "VERIFIED",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "start_tick": 55,
+        "end_tick": 66
+      },
+      {
+        "episode": 3,
+        "scenario": "task_hang",
+        "primary_cause": "TASK_PROGRESS_FAILURE",
+        "terminal_state": "NORMAL",
+        "recovery_status": "VERIFIED",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "start_tick": 93,
+        "end_tick": 102
+      }
+    ]
+  },
+  "events": [
+    {
+      "sequence": 1,
+      "tick": 0,
+      "component": "autonomous_supervisor",
+      "event": "session_started",
+      "detail": "continuous monitoring enabled; automatic seeded fault scheduling active; device=AIBARS-AUTO-ECU-01; seed=20261110; interval_mode=RANDOM; interval_seconds=2.000000..2.500000; tick_delay_ms=100"
+    },
+    {
+      "sequence": 2,
+      "tick": 1,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.350 C, voltage=24.080 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 3,
+      "tick": 2,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.700 C, voltage=24.160 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 4,
+      "tick": 3,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=35.050 C, voltage=24.240 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 5,
+      "tick": 4,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=35.400 C, voltage=24.320 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 6,
+      "tick": 5,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=35.750 C, voltage=24.000 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 7,
+      "tick": 6,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.100 C, voltage=24.080 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 8,
+      "tick": 7,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.450 C, voltage=24.160 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 9,
+      "tick": 8,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.800 C, voltage=24.240 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 10,
+      "tick": 9,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.000 C, voltage=24.320 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 11,
+      "tick": 10,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.350 C, voltage=24.000 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 12,
+      "tick": 11,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.700 C, voltage=24.080 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 13,
+      "tick": 12,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=35.050 C, voltage=24.160 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 14,
+      "tick": 13,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=35.400 C, voltage=24.240 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 15,
+      "tick": 14,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=35.750 C, voltage=24.320 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 16,
+      "tick": 15,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.100 C, voltage=24.000 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 17,
+      "tick": 16,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.450 C, voltage=24.080 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 18,
+      "tick": 17,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.800 C, voltage=24.160 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 19,
+      "tick": 18,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.000 C, voltage=24.240 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 20,
+      "tick": 19,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.350 C, voltage=24.320 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 21,
+      "tick": 20,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.700 C, voltage=24.000 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 22,
+      "tick": 21,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=35.050 C, voltage=24.080 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 23,
+      "tick": 22,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=35.400 C, voltage=24.160 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 24,
+      "tick": 22,
+      "component": "fault_scheduler",
+      "event": "fault_scheduled",
+      "detail": "automatic scheduler selected scenario=communication_timeout, episode=1, healthy_interval_cycles=22, healthy_interval_seconds=2.200000, severity_class=recoverable_test"
+    },
+    {
+      "sequence": 25,
+      "tick": 22,
+      "component": "autonomous_supervisor",
+      "event": "episode_started",
+      "detail": "episode=1, scenario=communication_timeout, monitoring continues on the same logical device"
+    },
+    {
+      "sequence": 26,
+      "tick": 23,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=35.750 C, voltage=24.240 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 27,
+      "tick": 24,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=36.100 C, voltage=24.320 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 28,
+      "tick": 25,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=36.450 C, voltage=24.000 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 29,
+      "tick": 26,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=36.800 C, voltage=24.080 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 30,
+      "tick": 27,
+      "component": "fault_injector",
+      "event": "fault_activated",
+      "detail": "automatic scheduler activated communication_timeout on the simulated device"
+    },
+    {
+      "sequence": 31,
+      "tick": 27,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=34.000 C, voltage=24.160 V, current=4.720 A, temperature_age=0, communication_age=1, communication_ok=false, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 32,
+      "tick": 28,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=34.350 C, voltage=24.240 V, current=4.000 A, temperature_age=0, communication_age=2, communication_ok=false, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 33,
+      "tick": 29,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=34.700 C, voltage=24.320 V, current=4.120 A, temperature_age=0, communication_age=3, communication_ok=false, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 34,
+      "tick": 29,
+      "component": "fault_detector",
+      "event": "fault_detected",
+      "detail": "COMMUNICATION_TIMEOUT | communication status=lost, heartbeat age=3 ticks, threshold=3 ticks"
+    },
+    {
+      "sequence": 35,
+      "tick": 29,
+      "component": "diagnosis",
+      "event": "diagnosis_completed",
+      "detail": "COMMUNICATION_HEARTBEAT_TIMEOUT | The communication heartbeat age reached the configured timeout; restart the simulated communication interface and verify heartbeat recovery."
+    },
+    {
+      "sequence": 36,
+      "tick": 29,
+      "component": "recovery",
+      "event": "recovery_attempt_started",
+      "detail": "attempt=1, action=RESTART_COMMUNICATION"
+    },
+    {
+      "sequence": 37,
+      "tick": 30,
+      "component": "verification",
+      "event": "health_sample",
+      "detail": "temperature=35.05 C, voltage=24 V, current=4.24 A"
+    },
+    {
+      "sequence": 38,
+      "tick": 30,
+      "component": "verification",
+      "event": "healthy_cycle",
+      "detail": "consecutive healthy cycle 1 of 3"
+    },
+    {
+      "sequence": 39,
+      "tick": 31,
+      "component": "verification",
+      "event": "health_sample",
+      "detail": "temperature=35.4 C, voltage=24.08 V, current=4.36 A"
+    },
+    {
+      "sequence": 40,
+      "tick": 31,
+      "component": "verification",
+      "event": "healthy_cycle",
+      "detail": "consecutive healthy cycle 2 of 3"
+    },
+    {
+      "sequence": 41,
+      "tick": 32,
+      "component": "verification",
+      "event": "health_sample",
+      "detail": "temperature=35.75 C, voltage=24.16 V, current=4.48 A"
+    },
+    {
+      "sequence": 42,
+      "tick": 32,
+      "component": "verification",
+      "event": "healthy_cycle",
+      "detail": "consecutive healthy cycle 3 of 3"
+    },
+    {
+      "sequence": 43,
+      "tick": 32,
+      "component": "recovery",
+      "event": "recovery_verified",
+      "detail": "Recovery passed 3 consecutive healthy verification cycles."
+    },
+    {
+      "sequence": 44,
+      "tick": 32,
+      "component": "autonomous_supervisor",
+      "event": "episode_completed",
+      "detail": "episode=1, scenario=communication_timeout, diagnosis=COMMUNICATION_HEARTBEAT_TIMEOUT, recovery=VERIFIED, terminal_state=NORMAL"
+    },
+    {
+      "sequence": 45,
+      "tick": 32,
+      "component": "autonomous_supervisor",
+      "event": "monitoring_resumed",
+      "detail": "recovery verified; normal telemetry monitoring resumed on AIBARS-AUTO-ECU-01"
+    },
+    {
+      "sequence": 46,
+      "tick": 33,
+      "component": "telemetry",
+      "event": "post_recovery_normal_sample",
+      "detail": "temperature=36.100 C, voltage=24.240 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 47,
+      "tick": 34,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.450 C, voltage=24.320 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 48,
+      "tick": 35,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.800 C, voltage=24.000 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 49,
+      "tick": 36,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.000 C, voltage=24.080 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 50,
+      "tick": 37,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.350 C, voltage=24.160 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 51,
+      "tick": 38,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.700 C, voltage=24.240 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 52,
+      "tick": 39,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=35.050 C, voltage=24.320 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 53,
+      "tick": 40,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=35.400 C, voltage=24.000 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 54,
+      "tick": 41,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=35.750 C, voltage=24.080 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 55,
+      "tick": 42,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.100 C, voltage=24.160 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 56,
+      "tick": 43,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.450 C, voltage=24.240 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 57,
+      "tick": 44,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.800 C, voltage=24.320 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 58,
+      "tick": 45,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.000 C, voltage=24.000 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 59,
+      "tick": 46,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.350 C, voltage=24.080 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 60,
+      "tick": 47,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.700 C, voltage=24.160 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 61,
+      "tick": 48,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=35.050 C, voltage=24.240 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 62,
+      "tick": 49,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=35.400 C, voltage=24.320 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 63,
+      "tick": 50,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=35.750 C, voltage=24.000 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 64,
+      "tick": 51,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.100 C, voltage=24.080 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 65,
+      "tick": 52,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.450 C, voltage=24.160 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 66,
+      "tick": 53,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.800 C, voltage=24.240 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 67,
+      "tick": 54,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.000 C, voltage=24.320 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 68,
+      "tick": 54,
+      "component": "fault_scheduler",
+      "event": "fault_scheduled",
+      "detail": "automatic scheduler selected scenario=sensor_stuck, episode=2, healthy_interval_cycles=21, healthy_interval_seconds=2.100000, severity_class=recoverable_test"
+    },
+    {
+      "sequence": 69,
+      "tick": 54,
+      "component": "autonomous_supervisor",
+      "event": "episode_started",
+      "detail": "episode=2, scenario=sensor_stuck, monitoring continues on the same logical device"
+    },
+    {
+      "sequence": 70,
+      "tick": 55,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=34.350 C, voltage=24.000 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 71,
+      "tick": 56,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=34.700 C, voltage=24.080 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 72,
+      "tick": 57,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=35.050 C, voltage=24.160 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 73,
+      "tick": 58,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=35.400 C, voltage=24.240 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 74,
+      "tick": 59,
+      "component": "fault_injector",
+      "event": "fault_activated",
+      "detail": "automatic scheduler activated sensor_stuck on the simulated device"
+    },
+    {
+      "sequence": 75,
+      "tick": 59,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=42.000 C, voltage=24.320 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 76,
+      "tick": 60,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=42.000 C, voltage=24.000 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 77,
+      "tick": 61,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=42.000 C, voltage=24.080 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 78,
+      "tick": 62,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=42.000 C, voltage=24.160 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 79,
+      "tick": 63,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=42.000 C, voltage=24.240 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 80,
+      "tick": 63,
+      "component": "fault_detector",
+      "event": "fault_detected",
+      "detail": "SENSOR_STUCK | temperature value remained unchanged across 5 consecutive fresh samples"
+    },
+    {
+      "sequence": 81,
+      "tick": 63,
+      "component": "diagnosis",
+      "event": "diagnosis_completed",
+      "detail": "SENSOR_STUCK_AT | The temperature value remained unchanged across the configured number of consecutive fresh samples; reinitialize the simulated sensor."
+    },
+    {
+      "sequence": 82,
+      "tick": 63,
+      "component": "recovery",
+      "event": "recovery_attempt_started",
+      "detail": "attempt=1, action=REINITIALIZE_SENSOR"
+    },
+    {
+      "sequence": 83,
+      "tick": 64,
+      "component": "verification",
+      "event": "health_sample",
+      "detail": "temperature=34.35 C, voltage=24.32 V, current=4.12 A"
+    },
+    {
+      "sequence": 84,
+      "tick": 64,
+      "component": "verification",
+      "event": "healthy_cycle",
+      "detail": "consecutive healthy cycle 1 of 3"
+    },
+    {
+      "sequence": 85,
+      "tick": 65,
+      "component": "verification",
+      "event": "health_sample",
+      "detail": "temperature=34.7 C, voltage=24 V, current=4.24 A"
+    },
+    {
+      "sequence": 86,
+      "tick": 65,
+      "component": "verification",
+      "event": "healthy_cycle",
+      "detail": "consecutive healthy cycle 2 of 3"
+    },
+    {
+      "sequence": 87,
+      "tick": 66,
+      "component": "verification",
+      "event": "health_sample",
+      "detail": "temperature=35.05 C, voltage=24.08 V, current=4.36 A"
+    },
+    {
+      "sequence": 88,
+      "tick": 66,
+      "component": "verification",
+      "event": "healthy_cycle",
+      "detail": "consecutive healthy cycle 3 of 3"
+    },
+    {
+      "sequence": 89,
+      "tick": 66,
+      "component": "recovery",
+      "event": "recovery_verified",
+      "detail": "Recovery passed 3 consecutive healthy verification cycles."
+    },
+    {
+      "sequence": 90,
+      "tick": 66,
+      "component": "autonomous_supervisor",
+      "event": "episode_completed",
+      "detail": "episode=2, scenario=sensor_stuck, diagnosis=SENSOR_STUCK_AT, recovery=VERIFIED, terminal_state=NORMAL"
+    },
+    {
+      "sequence": 91,
+      "tick": 66,
+      "component": "autonomous_supervisor",
+      "event": "monitoring_resumed",
+      "detail": "recovery verified; normal telemetry monitoring resumed on AIBARS-AUTO-ECU-01"
+    },
+    {
+      "sequence": 92,
+      "tick": 67,
+      "component": "telemetry",
+      "event": "post_recovery_normal_sample",
+      "detail": "temperature=35.400 C, voltage=24.160 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 93,
+      "tick": 68,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=35.750 C, voltage=24.240 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 94,
+      "tick": 69,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.100 C, voltage=24.320 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 95,
+      "tick": 70,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.450 C, voltage=24.000 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 96,
+      "tick": 71,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.800 C, voltage=24.080 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 97,
+      "tick": 72,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.000 C, voltage=24.160 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 98,
+      "tick": 73,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.350 C, voltage=24.240 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 99,
+      "tick": 74,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.700 C, voltage=24.320 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 100,
+      "tick": 75,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=35.050 C, voltage=24.000 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 101,
+      "tick": 76,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=35.400 C, voltage=24.080 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 102,
+      "tick": 77,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=35.750 C, voltage=24.160 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 103,
+      "tick": 78,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.100 C, voltage=24.240 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 104,
+      "tick": 79,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.450 C, voltage=24.320 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 105,
+      "tick": 80,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.800 C, voltage=24.000 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 106,
+      "tick": 81,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.000 C, voltage=24.080 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 107,
+      "tick": 82,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.350 C, voltage=24.160 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 108,
+      "tick": 83,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.700 C, voltage=24.240 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 109,
+      "tick": 84,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=35.050 C, voltage=24.320 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 110,
+      "tick": 85,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=35.400 C, voltage=24.000 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 111,
+      "tick": 86,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=35.750 C, voltage=24.080 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 112,
+      "tick": 87,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.100 C, voltage=24.160 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 113,
+      "tick": 88,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.450 C, voltage=24.240 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 114,
+      "tick": 89,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=36.800 C, voltage=24.320 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 115,
+      "tick": 90,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.000 C, voltage=24.000 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 116,
+      "tick": 91,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.350 C, voltage=24.080 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 117,
+      "tick": 92,
+      "component": "telemetry",
+      "event": "normal_sample_observed",
+      "detail": "temperature=34.700 C, voltage=24.160 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 118,
+      "tick": 92,
+      "component": "fault_scheduler",
+      "event": "fault_scheduled",
+      "detail": "automatic scheduler selected scenario=task_hang, episode=3, healthy_interval_cycles=25, healthy_interval_seconds=2.500000, severity_class=recoverable_test"
+    },
+    {
+      "sequence": 119,
+      "tick": 92,
+      "component": "autonomous_supervisor",
+      "event": "episode_started",
+      "detail": "episode=3, scenario=task_hang, monitoring continues on the same logical device"
+    },
+    {
+      "sequence": 120,
+      "tick": 93,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=35.050 C, voltage=24.240 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 121,
+      "tick": 94,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=35.400 C, voltage=24.320 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 122,
+      "tick": 95,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=35.750 C, voltage=24.000 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 123,
+      "tick": 96,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=36.100 C, voltage=24.080 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 124,
+      "tick": 97,
+      "component": "fault_injector",
+      "event": "fault_activated",
+      "detail": "automatic scheduler activated task_hang on the simulated device"
+    },
+    {
+      "sequence": 125,
+      "tick": 97,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=36.450 C, voltage=24.160 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=false, primary_task_stall=1, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 126,
+      "tick": 98,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=36.800 C, voltage=24.240 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=false, primary_task_stall=2, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 127,
+      "tick": 99,
+      "component": "telemetry",
+      "event": "episode_sample_observed",
+      "detail": "temperature=34.000 C, voltage=24.320 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=false, primary_task_stall=3, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 128,
+      "tick": 99,
+      "component": "fault_detector",
+      "event": "fault_detected",
+      "detail": "TASK_HANG | task=PRIMARY_CONTROL_LOOP progress stalled for 3 ticks, threshold=3 ticks"
+    },
+    {
+      "sequence": 129,
+      "tick": 99,
+      "component": "diagnosis",
+      "event": "diagnosis_completed",
+      "detail": "TASK_PROGRESS_FAILURE | The task progress indicator has not advanced within the configured monitoring window; restart the simulated task."
+    },
+    {
+      "sequence": 130,
+      "tick": 99,
+      "component": "recovery",
+      "event": "recovery_attempt_started",
+      "detail": "attempt=1, action=RESTART_TASK"
+    },
+    {
+      "sequence": 131,
+      "tick": 100,
+      "component": "verification",
+      "event": "health_sample",
+      "detail": "temperature=34.35 C, voltage=24 V, current=4.24 A"
+    },
+    {
+      "sequence": 132,
+      "tick": 100,
+      "component": "verification",
+      "event": "healthy_cycle",
+      "detail": "consecutive healthy cycle 1 of 3"
+    },
+    {
+      "sequence": 133,
+      "tick": 101,
+      "component": "verification",
+      "event": "health_sample",
+      "detail": "temperature=34.7 C, voltage=24.08 V, current=4.36 A"
+    },
+    {
+      "sequence": 134,
+      "tick": 101,
+      "component": "verification",
+      "event": "healthy_cycle",
+      "detail": "consecutive healthy cycle 2 of 3"
+    },
+    {
+      "sequence": 135,
+      "tick": 102,
+      "component": "verification",
+      "event": "health_sample",
+      "detail": "temperature=35.05 C, voltage=24.16 V, current=4.48 A"
+    },
+    {
+      "sequence": 136,
+      "tick": 102,
+      "component": "verification",
+      "event": "healthy_cycle",
+      "detail": "consecutive healthy cycle 3 of 3"
+    },
+    {
+      "sequence": 137,
+      "tick": 102,
+      "component": "recovery",
+      "event": "recovery_verified",
+      "detail": "Recovery passed 3 consecutive healthy verification cycles."
+    },
+    {
+      "sequence": 138,
+      "tick": 102,
+      "component": "autonomous_supervisor",
+      "event": "episode_completed",
+      "detail": "episode=3, scenario=task_hang, diagnosis=TASK_PROGRESS_FAILURE, recovery=VERIFIED, terminal_state=NORMAL"
+    },
+    {
+      "sequence": 139,
+      "tick": 102,
+      "component": "autonomous_supervisor",
+      "event": "monitoring_resumed",
+      "detail": "recovery verified; normal telemetry monitoring resumed on AIBARS-AUTO-ECU-01"
+    },
+    {
+      "sequence": 140,
+      "tick": 103,
+      "component": "telemetry",
+      "event": "post_recovery_normal_sample",
+      "detail": "temperature=35.400 C, voltage=24.240 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+    },
+    {
+      "sequence": 141,
+      "tick": 103,
+      "component": "autonomous_supervisor",
+      "event": "session_completed",
+      "detail": "state=COMPLETED, monitored_cycles=71, incidents=3, verified_recoveries=3"
+    }
+  ],
+  "episode_analysis": [
+    {
+      "episode": {
+        "episode": 1,
+        "scenario": "communication_timeout",
+        "primary_cause": "COMMUNICATION_HEARTBEAT_TIMEOUT",
+        "terminal_state": "NORMAL",
+        "recovery_status": "VERIFIED",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "start_tick": 23,
+        "end_tick": 32
+      },
+      "summary": {
+        "scenario": "communication_timeout",
+        "terminal_state": "NORMAL",
+        "detected_faults": [
+          "COMMUNICATION_TIMEOUT"
+        ],
+        "primary_cause": "COMMUNICATION_HEARTBEAT_TIMEOUT",
+        "recovery_action": "RESTART_COMMUNICATION",
+        "recovery_status": "VERIFIED",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "total_ticks": 32
+      },
+      "incident": {
+        "primary_cause": "COMMUNICATION_HEARTBEAT_TIMEOUT",
+        "severity": "HIGH",
+        "rule_match_score": 0.95,
+        "rationale": "The communication heartbeat age reached the configured timeout; restart the simulated communication interface and verify heartbeat recovery.",
+        "recommended_action": "RESTART_COMMUNICATION",
+        "terminal_state": "NORMAL",
+        "recovery_status": "VERIFIED",
+        "recovery_explanation": "Recovery passed 3 consecutive healthy verification cycles.",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "faults": [
+          {
+            "code": "COMMUNICATION_TIMEOUT",
+            "severity": "HIGH",
+            "evidence": "communication status=lost, heartbeat age=3 ticks, threshold=3 ticks"
+          }
+        ],
+        "recent_events": [
+          {
+            "sequence": 1,
+            "tick": 0,
+            "component": "autonomous_supervisor",
+            "event": "session_started",
+            "detail": "continuous monitoring enabled; automatic seeded fault scheduling active; device=AIBARS-AUTO-ECU-01; seed=20261110; interval_mode=RANDOM; interval_seconds=2.000000..2.500000; tick_delay_ms=100"
+          },
+          {
+            "sequence": 2,
+            "tick": 1,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.350 C, voltage=24.080 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 3,
+            "tick": 2,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.700 C, voltage=24.160 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 4,
+            "tick": 3,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.050 C, voltage=24.240 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 5,
+            "tick": 4,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.400 C, voltage=24.320 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 6,
+            "tick": 5,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.750 C, voltage=24.000 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 7,
+            "tick": 6,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.100 C, voltage=24.080 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 8,
+            "tick": 7,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.450 C, voltage=24.160 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 9,
+            "tick": 8,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.800 C, voltage=24.240 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 10,
+            "tick": 9,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.000 C, voltage=24.320 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 11,
+            "tick": 10,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.350 C, voltage=24.000 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 12,
+            "tick": 11,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.700 C, voltage=24.080 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 13,
+            "tick": 12,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.050 C, voltage=24.160 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 14,
+            "tick": 13,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.400 C, voltage=24.240 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 15,
+            "tick": 14,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.750 C, voltage=24.320 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 16,
+            "tick": 15,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.100 C, voltage=24.000 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 17,
+            "tick": 16,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.450 C, voltage=24.080 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 18,
+            "tick": 17,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.800 C, voltage=24.160 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 19,
+            "tick": 18,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.000 C, voltage=24.240 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 20,
+            "tick": 19,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.350 C, voltage=24.320 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 21,
+            "tick": 20,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.700 C, voltage=24.000 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 22,
+            "tick": 21,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.050 C, voltage=24.080 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 23,
+            "tick": 22,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.400 C, voltage=24.160 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 24,
+            "tick": 22,
+            "component": "fault_scheduler",
+            "event": "fault_scheduled",
+            "detail": "automatic scheduler selected scenario=communication_timeout, episode=1, healthy_interval_cycles=22, healthy_interval_seconds=2.200000, severity_class=recoverable_test"
+          },
+          {
+            "sequence": 25,
+            "tick": 22,
+            "component": "autonomous_supervisor",
+            "event": "episode_started",
+            "detail": "episode=1, scenario=communication_timeout, monitoring continues on the same logical device"
+          },
+          {
+            "sequence": 26,
+            "tick": 23,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=35.750 C, voltage=24.240 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 27,
+            "tick": 24,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=36.100 C, voltage=24.320 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 28,
+            "tick": 25,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=36.450 C, voltage=24.000 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 29,
+            "tick": 26,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=36.800 C, voltage=24.080 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 30,
+            "tick": 27,
+            "component": "fault_injector",
+            "event": "fault_activated",
+            "detail": "automatic scheduler activated communication_timeout on the simulated device"
+          },
+          {
+            "sequence": 31,
+            "tick": 27,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=34.000 C, voltage=24.160 V, current=4.720 A, temperature_age=0, communication_age=1, communication_ok=false, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 32,
+            "tick": 28,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=34.350 C, voltage=24.240 V, current=4.000 A, temperature_age=0, communication_age=2, communication_ok=false, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 33,
+            "tick": 29,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=34.700 C, voltage=24.320 V, current=4.120 A, temperature_age=0, communication_age=3, communication_ok=false, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 34,
+            "tick": 29,
+            "component": "fault_detector",
+            "event": "fault_detected",
+            "detail": "COMMUNICATION_TIMEOUT | communication status=lost, heartbeat age=3 ticks, threshold=3 ticks"
+          },
+          {
+            "sequence": 35,
+            "tick": 29,
+            "component": "diagnosis",
+            "event": "diagnosis_completed",
+            "detail": "COMMUNICATION_HEARTBEAT_TIMEOUT | The communication heartbeat age reached the configured timeout; restart the simulated communication interface and verify heartbeat recovery."
+          },
+          {
+            "sequence": 36,
+            "tick": 29,
+            "component": "recovery",
+            "event": "recovery_attempt_started",
+            "detail": "attempt=1, action=RESTART_COMMUNICATION"
+          },
+          {
+            "sequence": 37,
+            "tick": 30,
+            "component": "verification",
+            "event": "health_sample",
+            "detail": "temperature=35.05 C, voltage=24 V, current=4.24 A"
+          },
+          {
+            "sequence": 38,
+            "tick": 30,
+            "component": "verification",
+            "event": "healthy_cycle",
+            "detail": "consecutive healthy cycle 1 of 3"
+          },
+          {
+            "sequence": 39,
+            "tick": 31,
+            "component": "verification",
+            "event": "health_sample",
+            "detail": "temperature=35.4 C, voltage=24.08 V, current=4.36 A"
+          },
+          {
+            "sequence": 40,
+            "tick": 31,
+            "component": "verification",
+            "event": "healthy_cycle",
+            "detail": "consecutive healthy cycle 2 of 3"
+          },
+          {
+            "sequence": 41,
+            "tick": 32,
+            "component": "verification",
+            "event": "health_sample",
+            "detail": "temperature=35.75 C, voltage=24.16 V, current=4.48 A"
+          },
+          {
+            "sequence": 42,
+            "tick": 32,
+            "component": "verification",
+            "event": "healthy_cycle",
+            "detail": "consecutive healthy cycle 3 of 3"
+          },
+          {
+            "sequence": 43,
+            "tick": 32,
+            "component": "recovery",
+            "event": "recovery_verified",
+            "detail": "Recovery passed 3 consecutive healthy verification cycles."
+          }
+        ]
+      },
+      "events": [
+        {
+          "sequence": 26,
+          "tick": 23,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=35.750 C, voltage=24.240 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 27,
+          "tick": 24,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=36.100 C, voltage=24.320 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 28,
+          "tick": 25,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=36.450 C, voltage=24.000 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 29,
+          "tick": 26,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=36.800 C, voltage=24.080 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 30,
+          "tick": 27,
+          "component": "fault_injector",
+          "event": "fault_activated",
+          "detail": "automatic scheduler activated communication_timeout on the simulated device"
+        },
+        {
+          "sequence": 31,
+          "tick": 27,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=34.000 C, voltage=24.160 V, current=4.720 A, temperature_age=0, communication_age=1, communication_ok=false, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 32,
+          "tick": 28,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=34.350 C, voltage=24.240 V, current=4.000 A, temperature_age=0, communication_age=2, communication_ok=false, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 33,
+          "tick": 29,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=34.700 C, voltage=24.320 V, current=4.120 A, temperature_age=0, communication_age=3, communication_ok=false, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 34,
+          "tick": 29,
+          "component": "fault_detector",
+          "event": "fault_detected",
+          "detail": "COMMUNICATION_TIMEOUT | communication status=lost, heartbeat age=3 ticks, threshold=3 ticks"
+        },
+        {
+          "sequence": 35,
+          "tick": 29,
+          "component": "diagnosis",
+          "event": "diagnosis_completed",
+          "detail": "COMMUNICATION_HEARTBEAT_TIMEOUT | The communication heartbeat age reached the configured timeout; restart the simulated communication interface and verify heartbeat recovery."
+        },
+        {
+          "sequence": 36,
+          "tick": 29,
+          "component": "recovery",
+          "event": "recovery_attempt_started",
+          "detail": "attempt=1, action=RESTART_COMMUNICATION"
+        },
+        {
+          "sequence": 37,
+          "tick": 30,
+          "component": "verification",
+          "event": "health_sample",
+          "detail": "temperature=35.05 C, voltage=24 V, current=4.24 A"
+        },
+        {
+          "sequence": 38,
+          "tick": 30,
+          "component": "verification",
+          "event": "healthy_cycle",
+          "detail": "consecutive healthy cycle 1 of 3"
+        },
+        {
+          "sequence": 39,
+          "tick": 31,
+          "component": "verification",
+          "event": "health_sample",
+          "detail": "temperature=35.4 C, voltage=24.08 V, current=4.36 A"
+        },
+        {
+          "sequence": 40,
+          "tick": 31,
+          "component": "verification",
+          "event": "healthy_cycle",
+          "detail": "consecutive healthy cycle 2 of 3"
+        },
+        {
+          "sequence": 41,
+          "tick": 32,
+          "component": "verification",
+          "event": "health_sample",
+          "detail": "temperature=35.75 C, voltage=24.16 V, current=4.48 A"
+        },
+        {
+          "sequence": 42,
+          "tick": 32,
+          "component": "verification",
+          "event": "healthy_cycle",
+          "detail": "consecutive healthy cycle 3 of 3"
+        },
+        {
+          "sequence": 43,
+          "tick": 32,
+          "component": "recovery",
+          "event": "recovery_verified",
+          "detail": "Recovery passed 3 consecutive healthy verification cycles."
+        },
+        {
+          "sequence": 44,
+          "tick": 32,
+          "component": "autonomous_supervisor",
+          "event": "episode_completed",
+          "detail": "episode=1, scenario=communication_timeout, diagnosis=COMMUNICATION_HEARTBEAT_TIMEOUT, recovery=VERIFIED, terminal_state=NORMAL"
+        },
+        {
+          "sequence": 45,
+          "tick": 32,
+          "component": "autonomous_supervisor",
+          "event": "monitoring_resumed",
+          "detail": "recovery verified; normal telemetry monitoring resumed on AIBARS-AUTO-ECU-01"
+        }
+      ],
+      "ml_advisory": {
+        "prediction": "COMMUNICATION_TIMEOUT",
+        "confidence": 1.0,
+        "probabilities": {
+          "COMMUNICATION_TIMEOUT": 1.0,
+          "NORMAL": 1.6887976724935448e-53,
+          "SENSOR_OUT_OF_RANGE": 3.965380129059626e-63,
+          "SENSOR_STUCK": 2.113505962590688e-49,
+          "SENSOR_TIMEOUT": 1.635938140376836e-64,
+          "TASK_HANG": 9.648908390864202e-61
+        },
+        "features": {
+          "temperature_age_ticks": 0.0,
+          "temperature_stale_flag": 0.0,
+          "communication_age_ticks": 3.0,
+          "primary_task_stall_ticks": 0.0,
+          "temperature_range_deviation_c": 0.0,
+          "temperature_stuck_flag": 0.0,
+          "voltage_range_deviation_v": 0.0,
+          "current_range_deviation_a": 0.0,
+          "communication_loss_flag": 1.0,
+          "secondary_task_stall_ticks": 0.0
+        },
+        "explanation": "Advisory Gaussian Naive Bayes classification from extracted telemetry features; recovery remains governed by deterministic policy."
+      },
+      "risk_assessment": {
+        "score": 63.8,
+        "level": "HIGH",
+        "severity": "HIGH",
+        "impact_factor": 0.85,
+        "classifier_confidence_factor": 1.0,
+        "formula": "100 * max(severity/4, compound_fault_override) * impact * max(0.65, confidence)",
+        "interpretation": "Heuristic triage score for prioritising simulated incidents; not a calibrated failure probability or safety risk assessment."
+      },
+      "device_id": "AIBARS-AUTO-ECU-01"
+    },
+    {
+      "episode": {
+        "episode": 2,
+        "scenario": "sensor_stuck",
+        "primary_cause": "SENSOR_STUCK_AT",
+        "terminal_state": "NORMAL",
+        "recovery_status": "VERIFIED",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "start_tick": 55,
+        "end_tick": 66
+      },
+      "summary": {
+        "scenario": "sensor_stuck",
+        "terminal_state": "NORMAL",
+        "detected_faults": [
+          "SENSOR_STUCK"
+        ],
+        "primary_cause": "SENSOR_STUCK_AT",
+        "recovery_action": "REINITIALIZE_SENSOR",
+        "recovery_status": "VERIFIED",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "total_ticks": 66
+      },
+      "incident": {
+        "primary_cause": "SENSOR_STUCK_AT",
+        "severity": "MEDIUM",
+        "rule_match_score": 0.9,
+        "rationale": "The temperature value remained unchanged across the configured number of consecutive fresh samples; reinitialize the simulated sensor.",
+        "recommended_action": "REINITIALIZE_SENSOR",
+        "terminal_state": "NORMAL",
+        "recovery_status": "VERIFIED",
+        "recovery_explanation": "Recovery passed 3 consecutive healthy verification cycles.",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "faults": [
+          {
+            "code": "SENSOR_STUCK",
+            "severity": "MEDIUM",
+            "evidence": "temperature value remained unchanged across 5 consecutive fresh samples"
+          }
+        ],
+        "recent_events": [
+          {
+            "sequence": 1,
+            "tick": 0,
+            "component": "autonomous_supervisor",
+            "event": "session_started",
+            "detail": "continuous monitoring enabled; automatic seeded fault scheduling active; device=AIBARS-AUTO-ECU-01; seed=20261110; interval_mode=RANDOM; interval_seconds=2.000000..2.500000; tick_delay_ms=100"
+          },
+          {
+            "sequence": 2,
+            "tick": 1,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.350 C, voltage=24.080 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 3,
+            "tick": 2,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.700 C, voltage=24.160 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 4,
+            "tick": 3,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.050 C, voltage=24.240 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 5,
+            "tick": 4,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.400 C, voltage=24.320 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 6,
+            "tick": 5,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.750 C, voltage=24.000 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 7,
+            "tick": 6,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.100 C, voltage=24.080 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 8,
+            "tick": 7,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.450 C, voltage=24.160 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 9,
+            "tick": 8,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.800 C, voltage=24.240 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 10,
+            "tick": 9,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.000 C, voltage=24.320 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 11,
+            "tick": 10,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.350 C, voltage=24.000 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 12,
+            "tick": 11,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.700 C, voltage=24.080 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 13,
+            "tick": 12,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.050 C, voltage=24.160 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 14,
+            "tick": 13,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.400 C, voltage=24.240 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 15,
+            "tick": 14,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.750 C, voltage=24.320 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 16,
+            "tick": 15,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.100 C, voltage=24.000 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 17,
+            "tick": 16,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.450 C, voltage=24.080 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 18,
+            "tick": 17,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.800 C, voltage=24.160 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 19,
+            "tick": 18,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.000 C, voltage=24.240 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 20,
+            "tick": 19,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.350 C, voltage=24.320 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 21,
+            "tick": 20,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.700 C, voltage=24.000 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 22,
+            "tick": 21,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.050 C, voltage=24.080 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 23,
+            "tick": 22,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.400 C, voltage=24.160 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 24,
+            "tick": 22,
+            "component": "fault_scheduler",
+            "event": "fault_scheduled",
+            "detail": "automatic scheduler selected scenario=communication_timeout, episode=1, healthy_interval_cycles=22, healthy_interval_seconds=2.200000, severity_class=recoverable_test"
+          },
+          {
+            "sequence": 25,
+            "tick": 22,
+            "component": "autonomous_supervisor",
+            "event": "episode_started",
+            "detail": "episode=1, scenario=communication_timeout, monitoring continues on the same logical device"
+          },
+          {
+            "sequence": 26,
+            "tick": 23,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=35.750 C, voltage=24.240 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 27,
+            "tick": 24,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=36.100 C, voltage=24.320 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 28,
+            "tick": 25,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=36.450 C, voltage=24.000 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 29,
+            "tick": 26,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=36.800 C, voltage=24.080 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 30,
+            "tick": 27,
+            "component": "fault_injector",
+            "event": "fault_activated",
+            "detail": "automatic scheduler activated communication_timeout on the simulated device"
+          },
+          {
+            "sequence": 31,
+            "tick": 27,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=34.000 C, voltage=24.160 V, current=4.720 A, temperature_age=0, communication_age=1, communication_ok=false, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 32,
+            "tick": 28,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=34.350 C, voltage=24.240 V, current=4.000 A, temperature_age=0, communication_age=2, communication_ok=false, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 33,
+            "tick": 29,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=34.700 C, voltage=24.320 V, current=4.120 A, temperature_age=0, communication_age=3, communication_ok=false, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 34,
+            "tick": 29,
+            "component": "fault_detector",
+            "event": "fault_detected",
+            "detail": "COMMUNICATION_TIMEOUT | communication status=lost, heartbeat age=3 ticks, threshold=3 ticks"
+          },
+          {
+            "sequence": 35,
+            "tick": 29,
+            "component": "diagnosis",
+            "event": "diagnosis_completed",
+            "detail": "COMMUNICATION_HEARTBEAT_TIMEOUT | The communication heartbeat age reached the configured timeout; restart the simulated communication interface and verify heartbeat recovery."
+          },
+          {
+            "sequence": 36,
+            "tick": 29,
+            "component": "recovery",
+            "event": "recovery_attempt_started",
+            "detail": "attempt=1, action=RESTART_COMMUNICATION"
+          },
+          {
+            "sequence": 37,
+            "tick": 30,
+            "component": "verification",
+            "event": "health_sample",
+            "detail": "temperature=35.05 C, voltage=24 V, current=4.24 A"
+          },
+          {
+            "sequence": 38,
+            "tick": 30,
+            "component": "verification",
+            "event": "healthy_cycle",
+            "detail": "consecutive healthy cycle 1 of 3"
+          },
+          {
+            "sequence": 39,
+            "tick": 31,
+            "component": "verification",
+            "event": "health_sample",
+            "detail": "temperature=35.4 C, voltage=24.08 V, current=4.36 A"
+          },
+          {
+            "sequence": 40,
+            "tick": 31,
+            "component": "verification",
+            "event": "healthy_cycle",
+            "detail": "consecutive healthy cycle 2 of 3"
+          },
+          {
+            "sequence": 41,
+            "tick": 32,
+            "component": "verification",
+            "event": "health_sample",
+            "detail": "temperature=35.75 C, voltage=24.16 V, current=4.48 A"
+          },
+          {
+            "sequence": 42,
+            "tick": 32,
+            "component": "verification",
+            "event": "healthy_cycle",
+            "detail": "consecutive healthy cycle 3 of 3"
+          },
+          {
+            "sequence": 43,
+            "tick": 32,
+            "component": "recovery",
+            "event": "recovery_verified",
+            "detail": "Recovery passed 3 consecutive healthy verification cycles."
+          },
+          {
+            "sequence": 44,
+            "tick": 32,
+            "component": "autonomous_supervisor",
+            "event": "episode_completed",
+            "detail": "episode=1, scenario=communication_timeout, diagnosis=COMMUNICATION_HEARTBEAT_TIMEOUT, recovery=VERIFIED, terminal_state=NORMAL"
+          },
+          {
+            "sequence": 45,
+            "tick": 32,
+            "component": "autonomous_supervisor",
+            "event": "monitoring_resumed",
+            "detail": "recovery verified; normal telemetry monitoring resumed on AIBARS-AUTO-ECU-01"
+          },
+          {
+            "sequence": 46,
+            "tick": 33,
+            "component": "telemetry",
+            "event": "post_recovery_normal_sample",
+            "detail": "temperature=36.100 C, voltage=24.240 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 47,
+            "tick": 34,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.450 C, voltage=24.320 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 48,
+            "tick": 35,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.800 C, voltage=24.000 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 49,
+            "tick": 36,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.000 C, voltage=24.080 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 50,
+            "tick": 37,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.350 C, voltage=24.160 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 51,
+            "tick": 38,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.700 C, voltage=24.240 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 52,
+            "tick": 39,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.050 C, voltage=24.320 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 53,
+            "tick": 40,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.400 C, voltage=24.000 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 54,
+            "tick": 41,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.750 C, voltage=24.080 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 55,
+            "tick": 42,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.100 C, voltage=24.160 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 56,
+            "tick": 43,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.450 C, voltage=24.240 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 57,
+            "tick": 44,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.800 C, voltage=24.320 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 58,
+            "tick": 45,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.000 C, voltage=24.000 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 59,
+            "tick": 46,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.350 C, voltage=24.080 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 60,
+            "tick": 47,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.700 C, voltage=24.160 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 61,
+            "tick": 48,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.050 C, voltage=24.240 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 62,
+            "tick": 49,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.400 C, voltage=24.320 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 63,
+            "tick": 50,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.750 C, voltage=24.000 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 64,
+            "tick": 51,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.100 C, voltage=24.080 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 65,
+            "tick": 52,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.450 C, voltage=24.160 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 66,
+            "tick": 53,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.800 C, voltage=24.240 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 67,
+            "tick": 54,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.000 C, voltage=24.320 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 68,
+            "tick": 54,
+            "component": "fault_scheduler",
+            "event": "fault_scheduled",
+            "detail": "automatic scheduler selected scenario=sensor_stuck, episode=2, healthy_interval_cycles=21, healthy_interval_seconds=2.100000, severity_class=recoverable_test"
+          },
+          {
+            "sequence": 69,
+            "tick": 54,
+            "component": "autonomous_supervisor",
+            "event": "episode_started",
+            "detail": "episode=2, scenario=sensor_stuck, monitoring continues on the same logical device"
+          },
+          {
+            "sequence": 70,
+            "tick": 55,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=34.350 C, voltage=24.000 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 71,
+            "tick": 56,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=34.700 C, voltage=24.080 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 72,
+            "tick": 57,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=35.050 C, voltage=24.160 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 73,
+            "tick": 58,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=35.400 C, voltage=24.240 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 74,
+            "tick": 59,
+            "component": "fault_injector",
+            "event": "fault_activated",
+            "detail": "automatic scheduler activated sensor_stuck on the simulated device"
+          },
+          {
+            "sequence": 75,
+            "tick": 59,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=42.000 C, voltage=24.320 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 76,
+            "tick": 60,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=42.000 C, voltage=24.000 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 77,
+            "tick": 61,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=42.000 C, voltage=24.080 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 78,
+            "tick": 62,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=42.000 C, voltage=24.160 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 79,
+            "tick": 63,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=42.000 C, voltage=24.240 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 80,
+            "tick": 63,
+            "component": "fault_detector",
+            "event": "fault_detected",
+            "detail": "SENSOR_STUCK | temperature value remained unchanged across 5 consecutive fresh samples"
+          },
+          {
+            "sequence": 81,
+            "tick": 63,
+            "component": "diagnosis",
+            "event": "diagnosis_completed",
+            "detail": "SENSOR_STUCK_AT | The temperature value remained unchanged across the configured number of consecutive fresh samples; reinitialize the simulated sensor."
+          },
+          {
+            "sequence": 82,
+            "tick": 63,
+            "component": "recovery",
+            "event": "recovery_attempt_started",
+            "detail": "attempt=1, action=REINITIALIZE_SENSOR"
+          },
+          {
+            "sequence": 83,
+            "tick": 64,
+            "component": "verification",
+            "event": "health_sample",
+            "detail": "temperature=34.35 C, voltage=24.32 V, current=4.12 A"
+          },
+          {
+            "sequence": 84,
+            "tick": 64,
+            "component": "verification",
+            "event": "healthy_cycle",
+            "detail": "consecutive healthy cycle 1 of 3"
+          },
+          {
+            "sequence": 85,
+            "tick": 65,
+            "component": "verification",
+            "event": "health_sample",
+            "detail": "temperature=34.7 C, voltage=24 V, current=4.24 A"
+          },
+          {
+            "sequence": 86,
+            "tick": 65,
+            "component": "verification",
+            "event": "healthy_cycle",
+            "detail": "consecutive healthy cycle 2 of 3"
+          },
+          {
+            "sequence": 87,
+            "tick": 66,
+            "component": "verification",
+            "event": "health_sample",
+            "detail": "temperature=35.05 C, voltage=24.08 V, current=4.36 A"
+          },
+          {
+            "sequence": 88,
+            "tick": 66,
+            "component": "verification",
+            "event": "healthy_cycle",
+            "detail": "consecutive healthy cycle 3 of 3"
+          },
+          {
+            "sequence": 89,
+            "tick": 66,
+            "component": "recovery",
+            "event": "recovery_verified",
+            "detail": "Recovery passed 3 consecutive healthy verification cycles."
+          }
+        ]
+      },
+      "events": [
+        {
+          "sequence": 70,
+          "tick": 55,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=34.350 C, voltage=24.000 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 71,
+          "tick": 56,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=34.700 C, voltage=24.080 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 72,
+          "tick": 57,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=35.050 C, voltage=24.160 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 73,
+          "tick": 58,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=35.400 C, voltage=24.240 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 74,
+          "tick": 59,
+          "component": "fault_injector",
+          "event": "fault_activated",
+          "detail": "automatic scheduler activated sensor_stuck on the simulated device"
+        },
+        {
+          "sequence": 75,
+          "tick": 59,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=42.000 C, voltage=24.320 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 76,
+          "tick": 60,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=42.000 C, voltage=24.000 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 77,
+          "tick": 61,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=42.000 C, voltage=24.080 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 78,
+          "tick": 62,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=42.000 C, voltage=24.160 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 79,
+          "tick": 63,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=42.000 C, voltage=24.240 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 80,
+          "tick": 63,
+          "component": "fault_detector",
+          "event": "fault_detected",
+          "detail": "SENSOR_STUCK | temperature value remained unchanged across 5 consecutive fresh samples"
+        },
+        {
+          "sequence": 81,
+          "tick": 63,
+          "component": "diagnosis",
+          "event": "diagnosis_completed",
+          "detail": "SENSOR_STUCK_AT | The temperature value remained unchanged across the configured number of consecutive fresh samples; reinitialize the simulated sensor."
+        },
+        {
+          "sequence": 82,
+          "tick": 63,
+          "component": "recovery",
+          "event": "recovery_attempt_started",
+          "detail": "attempt=1, action=REINITIALIZE_SENSOR"
+        },
+        {
+          "sequence": 83,
+          "tick": 64,
+          "component": "verification",
+          "event": "health_sample",
+          "detail": "temperature=34.35 C, voltage=24.32 V, current=4.12 A"
+        },
+        {
+          "sequence": 84,
+          "tick": 64,
+          "component": "verification",
+          "event": "healthy_cycle",
+          "detail": "consecutive healthy cycle 1 of 3"
+        },
+        {
+          "sequence": 85,
+          "tick": 65,
+          "component": "verification",
+          "event": "health_sample",
+          "detail": "temperature=34.7 C, voltage=24 V, current=4.24 A"
+        },
+        {
+          "sequence": 86,
+          "tick": 65,
+          "component": "verification",
+          "event": "healthy_cycle",
+          "detail": "consecutive healthy cycle 2 of 3"
+        },
+        {
+          "sequence": 87,
+          "tick": 66,
+          "component": "verification",
+          "event": "health_sample",
+          "detail": "temperature=35.05 C, voltage=24.08 V, current=4.36 A"
+        },
+        {
+          "sequence": 88,
+          "tick": 66,
+          "component": "verification",
+          "event": "healthy_cycle",
+          "detail": "consecutive healthy cycle 3 of 3"
+        },
+        {
+          "sequence": 89,
+          "tick": 66,
+          "component": "recovery",
+          "event": "recovery_verified",
+          "detail": "Recovery passed 3 consecutive healthy verification cycles."
+        },
+        {
+          "sequence": 90,
+          "tick": 66,
+          "component": "autonomous_supervisor",
+          "event": "episode_completed",
+          "detail": "episode=2, scenario=sensor_stuck, diagnosis=SENSOR_STUCK_AT, recovery=VERIFIED, terminal_state=NORMAL"
+        },
+        {
+          "sequence": 91,
+          "tick": 66,
+          "component": "autonomous_supervisor",
+          "event": "monitoring_resumed",
+          "detail": "recovery verified; normal telemetry monitoring resumed on AIBARS-AUTO-ECU-01"
+        }
+      ],
+      "ml_advisory": {
+        "prediction": "SENSOR_STUCK",
+        "confidence": 1.0,
+        "probabilities": {
+          "COMMUNICATION_TIMEOUT": 2.168233530917668e-78,
+          "NORMAL": 5.589620834417868e-28,
+          "SENSOR_OUT_OF_RANGE": 3.1287886975181733e-59,
+          "SENSOR_STUCK": 1.0,
+          "SENSOR_TIMEOUT": 5.230119075013398e-57,
+          "TASK_HANG": 9.631534235620936e-41
+        },
+        "features": {
+          "temperature_age_ticks": 0.0,
+          "temperature_stale_flag": 0.0,
+          "communication_age_ticks": 0.0,
+          "primary_task_stall_ticks": 0.0,
+          "temperature_range_deviation_c": 0.0,
+          "temperature_stuck_flag": 1.0,
+          "voltage_range_deviation_v": 0.0,
+          "current_range_deviation_a": 0.0,
+          "communication_loss_flag": 0.0,
+          "secondary_task_stall_ticks": 0.0
+        },
+        "explanation": "Advisory Gaussian Naive Bayes classification from extracted telemetry features; recovery remains governed by deterministic policy."
+      },
+      "risk_assessment": {
+        "score": 32.5,
+        "level": "MODERATE",
+        "severity": "MEDIUM",
+        "impact_factor": 0.65,
+        "classifier_confidence_factor": 1.0,
+        "formula": "100 * max(severity/4, compound_fault_override) * impact * max(0.65, confidence)",
+        "interpretation": "Heuristic triage score for prioritising simulated incidents; not a calibrated failure probability or safety risk assessment."
+      },
+      "device_id": "AIBARS-AUTO-ECU-01"
+    },
+    {
+      "episode": {
+        "episode": 3,
+        "scenario": "task_hang",
+        "primary_cause": "TASK_PROGRESS_FAILURE",
+        "terminal_state": "NORMAL",
+        "recovery_status": "VERIFIED",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "start_tick": 93,
+        "end_tick": 102
+      },
+      "summary": {
+        "scenario": "task_hang",
+        "terminal_state": "NORMAL",
+        "detected_faults": [
+          "TASK_HANG"
+        ],
+        "primary_cause": "TASK_PROGRESS_FAILURE",
+        "recovery_action": "RESTART_TASK",
+        "recovery_status": "VERIFIED",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "total_ticks": 102
+      },
+      "incident": {
+        "primary_cause": "TASK_PROGRESS_FAILURE",
+        "severity": "HIGH",
+        "rule_match_score": 0.95,
+        "rationale": "The task progress indicator has not advanced within the configured monitoring window; restart the simulated task.",
+        "recommended_action": "RESTART_TASK",
+        "terminal_state": "NORMAL",
+        "recovery_status": "VERIFIED",
+        "recovery_explanation": "Recovery passed 3 consecutive healthy verification cycles.",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "faults": [
+          {
+            "code": "TASK_HANG",
+            "severity": "HIGH",
+            "evidence": "task=PRIMARY_CONTROL_LOOP progress stalled for 3 ticks, threshold=3 ticks"
+          }
+        ],
+        "recent_events": [
+          {
+            "sequence": 10,
+            "tick": 9,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.000 C, voltage=24.320 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 11,
+            "tick": 10,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.350 C, voltage=24.000 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 12,
+            "tick": 11,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.700 C, voltage=24.080 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 13,
+            "tick": 12,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.050 C, voltage=24.160 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 14,
+            "tick": 13,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.400 C, voltage=24.240 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 15,
+            "tick": 14,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.750 C, voltage=24.320 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 16,
+            "tick": 15,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.100 C, voltage=24.000 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 17,
+            "tick": 16,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.450 C, voltage=24.080 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 18,
+            "tick": 17,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.800 C, voltage=24.160 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 19,
+            "tick": 18,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.000 C, voltage=24.240 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 20,
+            "tick": 19,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.350 C, voltage=24.320 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 21,
+            "tick": 20,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.700 C, voltage=24.000 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 22,
+            "tick": 21,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.050 C, voltage=24.080 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 23,
+            "tick": 22,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.400 C, voltage=24.160 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 24,
+            "tick": 22,
+            "component": "fault_scheduler",
+            "event": "fault_scheduled",
+            "detail": "automatic scheduler selected scenario=communication_timeout, episode=1, healthy_interval_cycles=22, healthy_interval_seconds=2.200000, severity_class=recoverable_test"
+          },
+          {
+            "sequence": 25,
+            "tick": 22,
+            "component": "autonomous_supervisor",
+            "event": "episode_started",
+            "detail": "episode=1, scenario=communication_timeout, monitoring continues on the same logical device"
+          },
+          {
+            "sequence": 26,
+            "tick": 23,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=35.750 C, voltage=24.240 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 27,
+            "tick": 24,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=36.100 C, voltage=24.320 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 28,
+            "tick": 25,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=36.450 C, voltage=24.000 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 29,
+            "tick": 26,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=36.800 C, voltage=24.080 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 30,
+            "tick": 27,
+            "component": "fault_injector",
+            "event": "fault_activated",
+            "detail": "automatic scheduler activated communication_timeout on the simulated device"
+          },
+          {
+            "sequence": 31,
+            "tick": 27,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=34.000 C, voltage=24.160 V, current=4.720 A, temperature_age=0, communication_age=1, communication_ok=false, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 32,
+            "tick": 28,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=34.350 C, voltage=24.240 V, current=4.000 A, temperature_age=0, communication_age=2, communication_ok=false, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 33,
+            "tick": 29,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=34.700 C, voltage=24.320 V, current=4.120 A, temperature_age=0, communication_age=3, communication_ok=false, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 34,
+            "tick": 29,
+            "component": "fault_detector",
+            "event": "fault_detected",
+            "detail": "COMMUNICATION_TIMEOUT | communication status=lost, heartbeat age=3 ticks, threshold=3 ticks"
+          },
+          {
+            "sequence": 35,
+            "tick": 29,
+            "component": "diagnosis",
+            "event": "diagnosis_completed",
+            "detail": "COMMUNICATION_HEARTBEAT_TIMEOUT | The communication heartbeat age reached the configured timeout; restart the simulated communication interface and verify heartbeat recovery."
+          },
+          {
+            "sequence": 36,
+            "tick": 29,
+            "component": "recovery",
+            "event": "recovery_attempt_started",
+            "detail": "attempt=1, action=RESTART_COMMUNICATION"
+          },
+          {
+            "sequence": 37,
+            "tick": 30,
+            "component": "verification",
+            "event": "health_sample",
+            "detail": "temperature=35.05 C, voltage=24 V, current=4.24 A"
+          },
+          {
+            "sequence": 38,
+            "tick": 30,
+            "component": "verification",
+            "event": "healthy_cycle",
+            "detail": "consecutive healthy cycle 1 of 3"
+          },
+          {
+            "sequence": 39,
+            "tick": 31,
+            "component": "verification",
+            "event": "health_sample",
+            "detail": "temperature=35.4 C, voltage=24.08 V, current=4.36 A"
+          },
+          {
+            "sequence": 40,
+            "tick": 31,
+            "component": "verification",
+            "event": "healthy_cycle",
+            "detail": "consecutive healthy cycle 2 of 3"
+          },
+          {
+            "sequence": 41,
+            "tick": 32,
+            "component": "verification",
+            "event": "health_sample",
+            "detail": "temperature=35.75 C, voltage=24.16 V, current=4.48 A"
+          },
+          {
+            "sequence": 42,
+            "tick": 32,
+            "component": "verification",
+            "event": "healthy_cycle",
+            "detail": "consecutive healthy cycle 3 of 3"
+          },
+          {
+            "sequence": 43,
+            "tick": 32,
+            "component": "recovery",
+            "event": "recovery_verified",
+            "detail": "Recovery passed 3 consecutive healthy verification cycles."
+          },
+          {
+            "sequence": 44,
+            "tick": 32,
+            "component": "autonomous_supervisor",
+            "event": "episode_completed",
+            "detail": "episode=1, scenario=communication_timeout, diagnosis=COMMUNICATION_HEARTBEAT_TIMEOUT, recovery=VERIFIED, terminal_state=NORMAL"
+          },
+          {
+            "sequence": 45,
+            "tick": 32,
+            "component": "autonomous_supervisor",
+            "event": "monitoring_resumed",
+            "detail": "recovery verified; normal telemetry monitoring resumed on AIBARS-AUTO-ECU-01"
+          },
+          {
+            "sequence": 46,
+            "tick": 33,
+            "component": "telemetry",
+            "event": "post_recovery_normal_sample",
+            "detail": "temperature=36.100 C, voltage=24.240 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 47,
+            "tick": 34,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.450 C, voltage=24.320 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 48,
+            "tick": 35,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.800 C, voltage=24.000 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 49,
+            "tick": 36,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.000 C, voltage=24.080 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 50,
+            "tick": 37,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.350 C, voltage=24.160 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 51,
+            "tick": 38,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.700 C, voltage=24.240 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 52,
+            "tick": 39,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.050 C, voltage=24.320 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 53,
+            "tick": 40,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.400 C, voltage=24.000 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 54,
+            "tick": 41,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.750 C, voltage=24.080 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 55,
+            "tick": 42,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.100 C, voltage=24.160 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 56,
+            "tick": 43,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.450 C, voltage=24.240 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 57,
+            "tick": 44,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.800 C, voltage=24.320 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 58,
+            "tick": 45,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.000 C, voltage=24.000 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 59,
+            "tick": 46,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.350 C, voltage=24.080 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 60,
+            "tick": 47,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.700 C, voltage=24.160 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 61,
+            "tick": 48,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.050 C, voltage=24.240 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 62,
+            "tick": 49,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.400 C, voltage=24.320 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 63,
+            "tick": 50,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.750 C, voltage=24.000 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 64,
+            "tick": 51,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.100 C, voltage=24.080 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 65,
+            "tick": 52,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.450 C, voltage=24.160 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 66,
+            "tick": 53,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.800 C, voltage=24.240 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 67,
+            "tick": 54,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.000 C, voltage=24.320 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 68,
+            "tick": 54,
+            "component": "fault_scheduler",
+            "event": "fault_scheduled",
+            "detail": "automatic scheduler selected scenario=sensor_stuck, episode=2, healthy_interval_cycles=21, healthy_interval_seconds=2.100000, severity_class=recoverable_test"
+          },
+          {
+            "sequence": 69,
+            "tick": 54,
+            "component": "autonomous_supervisor",
+            "event": "episode_started",
+            "detail": "episode=2, scenario=sensor_stuck, monitoring continues on the same logical device"
+          },
+          {
+            "sequence": 70,
+            "tick": 55,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=34.350 C, voltage=24.000 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 71,
+            "tick": 56,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=34.700 C, voltage=24.080 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 72,
+            "tick": 57,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=35.050 C, voltage=24.160 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 73,
+            "tick": 58,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=35.400 C, voltage=24.240 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 74,
+            "tick": 59,
+            "component": "fault_injector",
+            "event": "fault_activated",
+            "detail": "automatic scheduler activated sensor_stuck on the simulated device"
+          },
+          {
+            "sequence": 75,
+            "tick": 59,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=42.000 C, voltage=24.320 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 76,
+            "tick": 60,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=42.000 C, voltage=24.000 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 77,
+            "tick": 61,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=42.000 C, voltage=24.080 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 78,
+            "tick": 62,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=42.000 C, voltage=24.160 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 79,
+            "tick": 63,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=42.000 C, voltage=24.240 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 80,
+            "tick": 63,
+            "component": "fault_detector",
+            "event": "fault_detected",
+            "detail": "SENSOR_STUCK | temperature value remained unchanged across 5 consecutive fresh samples"
+          },
+          {
+            "sequence": 81,
+            "tick": 63,
+            "component": "diagnosis",
+            "event": "diagnosis_completed",
+            "detail": "SENSOR_STUCK_AT | The temperature value remained unchanged across the configured number of consecutive fresh samples; reinitialize the simulated sensor."
+          },
+          {
+            "sequence": 82,
+            "tick": 63,
+            "component": "recovery",
+            "event": "recovery_attempt_started",
+            "detail": "attempt=1, action=REINITIALIZE_SENSOR"
+          },
+          {
+            "sequence": 83,
+            "tick": 64,
+            "component": "verification",
+            "event": "health_sample",
+            "detail": "temperature=34.35 C, voltage=24.32 V, current=4.12 A"
+          },
+          {
+            "sequence": 84,
+            "tick": 64,
+            "component": "verification",
+            "event": "healthy_cycle",
+            "detail": "consecutive healthy cycle 1 of 3"
+          },
+          {
+            "sequence": 85,
+            "tick": 65,
+            "component": "verification",
+            "event": "health_sample",
+            "detail": "temperature=34.7 C, voltage=24 V, current=4.24 A"
+          },
+          {
+            "sequence": 86,
+            "tick": 65,
+            "component": "verification",
+            "event": "healthy_cycle",
+            "detail": "consecutive healthy cycle 2 of 3"
+          },
+          {
+            "sequence": 87,
+            "tick": 66,
+            "component": "verification",
+            "event": "health_sample",
+            "detail": "temperature=35.05 C, voltage=24.08 V, current=4.36 A"
+          },
+          {
+            "sequence": 88,
+            "tick": 66,
+            "component": "verification",
+            "event": "healthy_cycle",
+            "detail": "consecutive healthy cycle 3 of 3"
+          },
+          {
+            "sequence": 89,
+            "tick": 66,
+            "component": "recovery",
+            "event": "recovery_verified",
+            "detail": "Recovery passed 3 consecutive healthy verification cycles."
+          },
+          {
+            "sequence": 90,
+            "tick": 66,
+            "component": "autonomous_supervisor",
+            "event": "episode_completed",
+            "detail": "episode=2, scenario=sensor_stuck, diagnosis=SENSOR_STUCK_AT, recovery=VERIFIED, terminal_state=NORMAL"
+          },
+          {
+            "sequence": 91,
+            "tick": 66,
+            "component": "autonomous_supervisor",
+            "event": "monitoring_resumed",
+            "detail": "recovery verified; normal telemetry monitoring resumed on AIBARS-AUTO-ECU-01"
+          },
+          {
+            "sequence": 92,
+            "tick": 67,
+            "component": "telemetry",
+            "event": "post_recovery_normal_sample",
+            "detail": "temperature=35.400 C, voltage=24.160 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 93,
+            "tick": 68,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.750 C, voltage=24.240 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 94,
+            "tick": 69,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.100 C, voltage=24.320 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 95,
+            "tick": 70,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.450 C, voltage=24.000 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 96,
+            "tick": 71,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.800 C, voltage=24.080 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 97,
+            "tick": 72,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.000 C, voltage=24.160 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 98,
+            "tick": 73,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.350 C, voltage=24.240 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 99,
+            "tick": 74,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.700 C, voltage=24.320 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 100,
+            "tick": 75,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.050 C, voltage=24.000 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 101,
+            "tick": 76,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.400 C, voltage=24.080 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 102,
+            "tick": 77,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.750 C, voltage=24.160 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 103,
+            "tick": 78,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.100 C, voltage=24.240 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 104,
+            "tick": 79,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.450 C, voltage=24.320 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 105,
+            "tick": 80,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.800 C, voltage=24.000 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 106,
+            "tick": 81,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.000 C, voltage=24.080 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 107,
+            "tick": 82,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.350 C, voltage=24.160 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 108,
+            "tick": 83,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.700 C, voltage=24.240 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 109,
+            "tick": 84,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.050 C, voltage=24.320 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 110,
+            "tick": 85,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.400 C, voltage=24.000 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 111,
+            "tick": 86,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=35.750 C, voltage=24.080 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 112,
+            "tick": 87,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.100 C, voltage=24.160 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 113,
+            "tick": 88,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.450 C, voltage=24.240 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 114,
+            "tick": 89,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=36.800 C, voltage=24.320 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 115,
+            "tick": 90,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.000 C, voltage=24.000 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 116,
+            "tick": 91,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.350 C, voltage=24.080 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 117,
+            "tick": 92,
+            "component": "telemetry",
+            "event": "normal_sample_observed",
+            "detail": "temperature=34.700 C, voltage=24.160 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 118,
+            "tick": 92,
+            "component": "fault_scheduler",
+            "event": "fault_scheduled",
+            "detail": "automatic scheduler selected scenario=task_hang, episode=3, healthy_interval_cycles=25, healthy_interval_seconds=2.500000, severity_class=recoverable_test"
+          },
+          {
+            "sequence": 119,
+            "tick": 92,
+            "component": "autonomous_supervisor",
+            "event": "episode_started",
+            "detail": "episode=3, scenario=task_hang, monitoring continues on the same logical device"
+          },
+          {
+            "sequence": 120,
+            "tick": 93,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=35.050 C, voltage=24.240 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 121,
+            "tick": 94,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=35.400 C, voltage=24.320 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 122,
+            "tick": 95,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=35.750 C, voltage=24.000 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 123,
+            "tick": 96,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=36.100 C, voltage=24.080 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 124,
+            "tick": 97,
+            "component": "fault_injector",
+            "event": "fault_activated",
+            "detail": "automatic scheduler activated task_hang on the simulated device"
+          },
+          {
+            "sequence": 125,
+            "tick": 97,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=36.450 C, voltage=24.160 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=false, primary_task_stall=1, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 126,
+            "tick": 98,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=36.800 C, voltage=24.240 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=false, primary_task_stall=2, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 127,
+            "tick": 99,
+            "component": "telemetry",
+            "event": "episode_sample_observed",
+            "detail": "temperature=34.000 C, voltage=24.320 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=false, primary_task_stall=3, secondary_task_progressing=true, secondary_task_stall=0"
+          },
+          {
+            "sequence": 128,
+            "tick": 99,
+            "component": "fault_detector",
+            "event": "fault_detected",
+            "detail": "TASK_HANG | task=PRIMARY_CONTROL_LOOP progress stalled for 3 ticks, threshold=3 ticks"
+          },
+          {
+            "sequence": 129,
+            "tick": 99,
+            "component": "diagnosis",
+            "event": "diagnosis_completed",
+            "detail": "TASK_PROGRESS_FAILURE | The task progress indicator has not advanced within the configured monitoring window; restart the simulated task."
+          },
+          {
+            "sequence": 130,
+            "tick": 99,
+            "component": "recovery",
+            "event": "recovery_attempt_started",
+            "detail": "attempt=1, action=RESTART_TASK"
+          },
+          {
+            "sequence": 131,
+            "tick": 100,
+            "component": "verification",
+            "event": "health_sample",
+            "detail": "temperature=34.35 C, voltage=24 V, current=4.24 A"
+          },
+          {
+            "sequence": 132,
+            "tick": 100,
+            "component": "verification",
+            "event": "healthy_cycle",
+            "detail": "consecutive healthy cycle 1 of 3"
+          },
+          {
+            "sequence": 133,
+            "tick": 101,
+            "component": "verification",
+            "event": "health_sample",
+            "detail": "temperature=34.7 C, voltage=24.08 V, current=4.36 A"
+          },
+          {
+            "sequence": 134,
+            "tick": 101,
+            "component": "verification",
+            "event": "healthy_cycle",
+            "detail": "consecutive healthy cycle 2 of 3"
+          },
+          {
+            "sequence": 135,
+            "tick": 102,
+            "component": "verification",
+            "event": "health_sample",
+            "detail": "temperature=35.05 C, voltage=24.16 V, current=4.48 A"
+          },
+          {
+            "sequence": 136,
+            "tick": 102,
+            "component": "verification",
+            "event": "healthy_cycle",
+            "detail": "consecutive healthy cycle 3 of 3"
+          },
+          {
+            "sequence": 137,
+            "tick": 102,
+            "component": "recovery",
+            "event": "recovery_verified",
+            "detail": "Recovery passed 3 consecutive healthy verification cycles."
+          }
+        ]
+      },
+      "events": [
+        {
+          "sequence": 120,
+          "tick": 93,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=35.050 C, voltage=24.240 V, current=4.240 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 121,
+          "tick": 94,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=35.400 C, voltage=24.320 V, current=4.360 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 122,
+          "tick": 95,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=35.750 C, voltage=24.000 V, current=4.480 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 123,
+          "tick": 96,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=36.100 C, voltage=24.080 V, current=4.600 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=true, primary_task_stall=0, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 124,
+          "tick": 97,
+          "component": "fault_injector",
+          "event": "fault_activated",
+          "detail": "automatic scheduler activated task_hang on the simulated device"
+        },
+        {
+          "sequence": 125,
+          "tick": 97,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=36.450 C, voltage=24.160 V, current=4.720 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=false, primary_task_stall=1, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 126,
+          "tick": 98,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=36.800 C, voltage=24.240 V, current=4.000 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=false, primary_task_stall=2, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 127,
+          "tick": 99,
+          "component": "telemetry",
+          "event": "episode_sample_observed",
+          "detail": "temperature=34.000 C, voltage=24.320 V, current=4.120 A, temperature_age=0, communication_age=0, communication_ok=true, primary_task_progressing=false, primary_task_stall=3, secondary_task_progressing=true, secondary_task_stall=0"
+        },
+        {
+          "sequence": 128,
+          "tick": 99,
+          "component": "fault_detector",
+          "event": "fault_detected",
+          "detail": "TASK_HANG | task=PRIMARY_CONTROL_LOOP progress stalled for 3 ticks, threshold=3 ticks"
+        },
+        {
+          "sequence": 129,
+          "tick": 99,
+          "component": "diagnosis",
+          "event": "diagnosis_completed",
+          "detail": "TASK_PROGRESS_FAILURE | The task progress indicator has not advanced within the configured monitoring window; restart the simulated task."
+        },
+        {
+          "sequence": 130,
+          "tick": 99,
+          "component": "recovery",
+          "event": "recovery_attempt_started",
+          "detail": "attempt=1, action=RESTART_TASK"
+        },
+        {
+          "sequence": 131,
+          "tick": 100,
+          "component": "verification",
+          "event": "health_sample",
+          "detail": "temperature=34.35 C, voltage=24 V, current=4.24 A"
+        },
+        {
+          "sequence": 132,
+          "tick": 100,
+          "component": "verification",
+          "event": "healthy_cycle",
+          "detail": "consecutive healthy cycle 1 of 3"
+        },
+        {
+          "sequence": 133,
+          "tick": 101,
+          "component": "verification",
+          "event": "health_sample",
+          "detail": "temperature=34.7 C, voltage=24.08 V, current=4.36 A"
+        },
+        {
+          "sequence": 134,
+          "tick": 101,
+          "component": "verification",
+          "event": "healthy_cycle",
+          "detail": "consecutive healthy cycle 2 of 3"
+        },
+        {
+          "sequence": 135,
+          "tick": 102,
+          "component": "verification",
+          "event": "health_sample",
+          "detail": "temperature=35.05 C, voltage=24.16 V, current=4.48 A"
+        },
+        {
+          "sequence": 136,
+          "tick": 102,
+          "component": "verification",
+          "event": "healthy_cycle",
+          "detail": "consecutive healthy cycle 3 of 3"
+        },
+        {
+          "sequence": 137,
+          "tick": 102,
+          "component": "recovery",
+          "event": "recovery_verified",
+          "detail": "Recovery passed 3 consecutive healthy verification cycles."
+        },
+        {
+          "sequence": 138,
+          "tick": 102,
+          "component": "autonomous_supervisor",
+          "event": "episode_completed",
+          "detail": "episode=3, scenario=task_hang, diagnosis=TASK_PROGRESS_FAILURE, recovery=VERIFIED, terminal_state=NORMAL"
+        },
+        {
+          "sequence": 139,
+          "tick": 102,
+          "component": "autonomous_supervisor",
+          "event": "monitoring_resumed",
+          "detail": "recovery verified; normal telemetry monitoring resumed on AIBARS-AUTO-ECU-01"
+        }
+      ],
+      "ml_advisory": {
+        "prediction": "TASK_HANG",
+        "confidence": 0.9983986505933148,
+        "probabilities": {
+          "COMMUNICATION_TIMEOUT": 3.6519908225915267e-28,
+          "NORMAL": 0.001601349405478717,
+          "SENSOR_OUT_OF_RANGE": 1.2064078765471924e-12,
+          "SENSOR_STUCK": 9.718045727570271e-21,
+          "SENSOR_TIMEOUT": 9.106693272488511e-24,
+          "TASK_HANG": 0.9983986505933148
+        },
+        "features": {
+          "temperature_age_ticks": 0.0,
+          "temperature_stale_flag": 0.0,
+          "communication_age_ticks": 0.0,
+          "primary_task_stall_ticks": 3.0,
+          "temperature_range_deviation_c": 0.0,
+          "temperature_stuck_flag": 0.0,
+          "voltage_range_deviation_v": 0.0,
+          "current_range_deviation_a": 0.0,
+          "communication_loss_flag": 0.0,
+          "secondary_task_stall_ticks": 0.0
+        },
+        "explanation": "Advisory Gaussian Naive Bayes classification from extracted telemetry features; recovery remains governed by deterministic policy."
+      },
+      "risk_assessment": {
+        "score": 67.4,
+        "level": "HIGH",
+        "severity": "HIGH",
+        "impact_factor": 0.9,
+        "classifier_confidence_factor": 0.9984,
+        "formula": "100 * max(severity/4, compound_fault_override) * impact * max(0.65, confidence)",
+        "interpretation": "Heuristic triage score for prioritising simulated incidents; not a calibrated failure probability or safety risk assessment."
+      },
+      "device_id": "AIBARS-AUTO-ECU-01"
+    }
+  ]
+}

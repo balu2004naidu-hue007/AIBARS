@@ -1,0 +1,86 @@
+{
+  "execution_mode": "concurrent laptop simulation",
+  "workers": 4,
+  "campaigns": [
+    {
+      "device_id": "ECU-SIM-01",
+      "scenario": "nominal",
+      "return_code": 0,
+      "stdout": "AIBARS RUN SUMMARY\nScenario           : nominal\nDetected faults    : NONE\nPrimary cause      : NO_FAULT_DETECTED\nRecovery action    : NONE\nRecovery status    : NOT_REQUIRED\nRecovery attempts  : 0\nVerified cycles    : 0\nTerminal state     : NORMAL\nTotal ticks        : 30\nOutput directory   : examples/advanced_runs/nominal\n\nNo fault was detected during the observation window.",
+      "stderr": "",
+      "output_dir": "examples/advanced_runs/nominal"
+    },
+    {
+      "device_id": "ECU-SIM-02",
+      "scenario": "sensor_timeout",
+      "return_code": 0,
+      "stdout": "AIBARS RUN SUMMARY\nScenario           : sensor_timeout\nDetected faults    : SENSOR_TIMEOUT\nPrimary cause      : SENSOR_DATA_TIMEOUT\nRecovery action    : RESTART_SENSOR\nRecovery status    : VERIFIED\nRecovery attempts  : 1\nVerified cycles    : 3\nTerminal state     : NORMAL\nTotal ticks        : 10\nOutput directory   : examples/advanced_runs/sensor_timeout\n\nRecovery passed 3 consecutive healthy verification cycles.",
+      "stderr": "",
+      "output_dir": "examples/advanced_runs/sensor_timeout"
+    },
+    {
+      "device_id": "EDGE-SIM-01",
+      "scenario": "sensor_stuck",
+      "return_code": 0,
+      "stdout": "AIBARS RUN SUMMARY\nScenario           : sensor_stuck\nDetected faults    : SENSOR_STUCK\nPrimary cause      : SENSOR_STUCK_AT\nRecovery action    : REINITIALIZE_SENSOR\nRecovery status    : VERIFIED\nRecovery attempts  : 1\nVerified cycles    : 3\nTerminal state     : NORMAL\nTotal ticks        : 12\nOutput directory   : examples/advanced_runs/sensor_stuck\n\nRecovery passed 3 consecutive healthy verification cycles.",
+      "stderr": "",
+      "output_dir": "examples/advanced_runs/sensor_stuck"
+    },
+    {
+      "device_id": "CTRL-SIM-01",
+      "scenario": "sensor_out_of_range",
+      "return_code": 0,
+      "stdout": "AIBARS RUN SUMMARY\nScenario           : sensor_out_of_range\nDetected faults    : SENSOR_OUT_OF_RANGE\nPrimary cause      : SENSOR_VALUE_OUT_OF_RANGE\nRecovery action    : QUARANTINE_SENSOR\nRecovery status    : VERIFIED\nRecovery attempts  : 1\nVerified cycles    : 3\nTerminal state     : NORMAL\nTotal ticks        : 8\nOutput directory   : examples/advanced_runs/sensor_out_of_range\n\nRecovery passed 3 consecutive healthy verification cycles.",
+      "stderr": "",
+      "output_dir": "examples/advanced_runs/sensor_out_of_range"
+    },
+    {
+      "device_id": "ECU-SIM-01",
+      "scenario": "communication_timeout",
+      "return_code": 0,
+      "stdout": "AIBARS RUN SUMMARY\nScenario           : communication_timeout\nDetected faults    : COMMUNICATION_TIMEOUT\nPrimary cause      : COMMUNICATION_HEARTBEAT_TIMEOUT\nRecovery action    : RESTART_COMMUNICATION\nRecovery status    : VERIFIED\nRecovery attempts  : 1\nVerified cycles    : 3\nTerminal state     : NORMAL\nTotal ticks        : 10\nOutput directory   : examples/advanced_runs/communication_timeout\n\nRecovery passed 3 consecutive healthy verification cycles.",
+      "stderr": "",
+      "output_dir": "examples/advanced_runs/communication_timeout"
+    },
+    {
+      "device_id": "ECU-SIM-02",
+      "scenario": "task_hang",
+      "return_code": 0,
+      "stdout": "AIBARS RUN SUMMARY\nScenario           : task_hang\nDetected faults    : TASK_HANG\nPrimary cause      : TASK_PROGRESS_FAILURE\nRecovery action    : RESTART_TASK\nRecovery status    : VERIFIED\nRecovery attempts  : 1\nVerified cycles    : 3\nTerminal state     : NORMAL\nTotal ticks        : 10\nOutput directory   : examples/advanced_runs/task_hang\n\nRecovery passed 3 consecutive healthy verification cycles.",
+      "stderr": "",
+      "output_dir": "examples/advanced_runs/task_hang"
+    },
+    {
+      "device_id": "EDGE-SIM-01",
+      "scenario": "secondary_task_hang",
+      "return_code": 0,
+      "stdout": "AIBARS RUN SUMMARY\nScenario           : secondary_task_hang\nDetected faults    : TASK_HANG\nPrimary cause      : TASK_PROGRESS_FAILURE\nRecovery action    : RESTART_TASK\nRecovery status    : VERIFIED\nRecovery attempts  : 1\nVerified cycles    : 3\nTerminal state     : NORMAL\nTotal ticks        : 10\nOutput directory   : examples/advanced_runs/secondary_task_hang\n\nRecovery passed 3 consecutive healthy verification cycles.",
+      "stderr": "",
+      "output_dir": "examples/advanced_runs/secondary_task_hang"
+    },
+    {
+      "device_id": "CTRL-SIM-01",
+      "scenario": "multiple_task_hangs",
+      "return_code": 0,
+      "stdout": "AIBARS RUN SUMMARY\nScenario           : multiple_task_hangs\nDetected faults    : TASK_HANG, TASK_HANG\nPrimary cause      : COMPOUND_FAULT\nRecovery action    : ENTER_SAFE_MODE\nRecovery status    : SAFE_MODE_ENTERED\nRecovery attempts  : 0\nVerified cycles    : 0\nTerminal state     : SAFE_MODE\nTotal ticks        : 7\nOutput directory   : examples/advanced_runs/multiple_task_hangs\n\nMultiple independent faults were present; automatic recovery was withheld and the simulated system entered safe mode.",
+      "stderr": "",
+      "output_dir": "examples/advanced_runs/multiple_task_hangs"
+    },
+    {
+      "device_id": "ECU-SIM-01",
+      "scenario": "multiple_faults",
+      "return_code": 0,
+      "stdout": "AIBARS RUN SUMMARY\nScenario           : multiple_faults\nDetected faults    : SENSOR_OUT_OF_RANGE, COMMUNICATION_TIMEOUT\nPrimary cause      : COMPOUND_FAULT\nRecovery action    : ENTER_SAFE_MODE\nRecovery status    : SAFE_MODE_ENTERED\nRecovery attempts  : 0\nVerified cycles    : 0\nTerminal state     : SAFE_MODE\nTotal ticks        : 5\nOutput directory   : examples/advanced_runs/multiple_faults\n\nMultiple independent faults were present; automatic recovery was withheld and the simulated system entered safe mode.",
+      "stderr": "",
+      "output_dir": "examples/advanced_runs/multiple_faults"
+    },
+    {
+      "device_id": "ECU-SIM-02",
+      "scenario": "recovery_failure",
+      "return_code": 0,
+      "stdout": "AIBARS RUN SUMMARY\nScenario           : recovery_failure\nDetected faults    : TASK_HANG\nPrimary cause      : TASK_PROGRESS_FAILURE\nRecovery action    : RESTART_TASK\nRecovery status    : SAFE_MODE_ENTERED\nRecovery attempts  : 2\nVerified cycles    : 0\nTerminal state     : SAFE_MODE\nTotal ticks        : 10\nOutput directory   : examples/advanced_runs/recovery_failure\n\nThe fault persisted after 2 bounded recovery attempt(s); the simulated system entered safe mode.",
+      "stderr": "",
+      "output_dir": "examples/advanced_runs/recovery_failure"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "scenario": "recovery_failure",
+  "terminal_state": "SAFE_MODE",
+  "primary_cause": "TASK_PROGRESS_FAILURE",
+  "recovery_action": "RESTART_TASK",
+  "recovery_status": "SAFE_MODE_ENTERED",
+  "recovery_attempts": 2,
+  "verified_cycles": 0,
+  "total_ticks": 10,
+  "detected_faults": ["TASK_HANG"]
+}

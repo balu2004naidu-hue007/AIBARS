@@ -1,0 +1,626 @@
+{
+  "fleet": {
+    "total_runs": 10,
+    "normal_runs": 1,
+    "verified_recoveries": 6,
+    "safe_mode_runs": 3,
+    "faulted_runs": 9
+  },
+  "machine_learning_evaluation": {
+    "algorithm": "Gaussian Naive Bayes",
+    "feature_names": [
+      "temperature_age_ticks",
+      "temperature_stale_flag",
+      "communication_age_ticks",
+      "primary_task_stall_ticks",
+      "temperature_range_deviation_c",
+      "temperature_stuck_flag",
+      "voltage_range_deviation_v",
+      "current_range_deviation_a",
+      "communication_loss_flag",
+      "secondary_task_stall_ticks"
+    ],
+    "classes": [
+      "NORMAL",
+      "SENSOR_TIMEOUT",
+      "SENSOR_STUCK",
+      "SENSOR_OUT_OF_RANGE",
+      "COMMUNICATION_TIMEOUT",
+      "TASK_HANG"
+    ],
+    "dataset": "synthetic labelled fault telemetry; generated deterministically",
+    "samples_total": 1440,
+    "training_samples": 1152,
+    "test_samples": 288,
+    "split": "stratified 80/20 hold-out",
+    "seed": 20261109,
+    "accuracy": 1.0,
+    "confusion_matrix": {
+      "NORMAL": {
+        "NORMAL": 48,
+        "SENSOR_TIMEOUT": 0,
+        "SENSOR_STUCK": 0,
+        "SENSOR_OUT_OF_RANGE": 0,
+        "COMMUNICATION_TIMEOUT": 0,
+        "TASK_HANG": 0
+      },
+      "SENSOR_TIMEOUT": {
+        "NORMAL": 0,
+        "SENSOR_TIMEOUT": 48,
+        "SENSOR_STUCK": 0,
+        "SENSOR_OUT_OF_RANGE": 0,
+        "COMMUNICATION_TIMEOUT": 0,
+        "TASK_HANG": 0
+      },
+      "SENSOR_STUCK": {
+        "NORMAL": 0,
+        "SENSOR_TIMEOUT": 0,
+        "SENSOR_STUCK": 48,
+        "SENSOR_OUT_OF_RANGE": 0,
+        "COMMUNICATION_TIMEOUT": 0,
+        "TASK_HANG": 0
+      },
+      "SENSOR_OUT_OF_RANGE": {
+        "NORMAL": 0,
+        "SENSOR_TIMEOUT": 0,
+        "SENSOR_STUCK": 0,
+        "SENSOR_OUT_OF_RANGE": 48,
+        "COMMUNICATION_TIMEOUT": 0,
+        "TASK_HANG": 0
+      },
+      "COMMUNICATION_TIMEOUT": {
+        "NORMAL": 0,
+        "SENSOR_TIMEOUT": 0,
+        "SENSOR_STUCK": 0,
+        "SENSOR_OUT_OF_RANGE": 0,
+        "COMMUNICATION_TIMEOUT": 48,
+        "TASK_HANG": 0
+      },
+      "TASK_HANG": {
+        "NORMAL": 0,
+        "SENSOR_TIMEOUT": 0,
+        "SENSOR_STUCK": 0,
+        "SENSOR_OUT_OF_RANGE": 0,
+        "COMMUNICATION_TIMEOUT": 0,
+        "TASK_HANG": 48
+      }
+    },
+    "per_class_metrics": {
+      "NORMAL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 48
+      },
+      "SENSOR_TIMEOUT": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 48
+      },
+      "SENSOR_STUCK": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 48
+      },
+      "SENSOR_OUT_OF_RANGE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 48
+      },
+      "COMMUNICATION_TIMEOUT": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 48
+      },
+      "TASK_HANG": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 48
+      }
+    },
+    "limitations": [
+      "Metrics measure separation of generated synthetic signatures only.",
+      "They are not field accuracy and do not establish real-world fault prediction performance.",
+      "Classifier output is advisory; deterministic C++ policy controls recovery."
+    ]
+  },
+  "risk_distribution": {
+    "LOW": 1,
+    "MODERATE": 1,
+    "HIGH": 6,
+    "CRITICAL": 2
+  },
+  "records": [
+    {
+      "run_id": "communication_timeout",
+      "summary": {
+        "scenario": "communication_timeout",
+        "terminal_state": "NORMAL",
+        "primary_cause": "COMMUNICATION_HEARTBEAT_TIMEOUT",
+        "recovery_action": "RESTART_COMMUNICATION",
+        "recovery_status": "VERIFIED",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "total_ticks": 10,
+        "detected_faults": [
+          "COMMUNICATION_TIMEOUT"
+        ]
+      },
+      "ml_advisory": {
+        "prediction": "COMMUNICATION_TIMEOUT",
+        "confidence": 1.0,
+        "probabilities": {
+          "COMMUNICATION_TIMEOUT": 1.0,
+          "NORMAL": 1.6887976724935448e-53,
+          "SENSOR_OUT_OF_RANGE": 3.965380129059626e-63,
+          "SENSOR_STUCK": 2.113505962590688e-49,
+          "SENSOR_TIMEOUT": 1.635938140376836e-64,
+          "TASK_HANG": 9.648908390864202e-61
+        },
+        "features": {
+          "temperature_age_ticks": 0.0,
+          "temperature_stale_flag": 0.0,
+          "communication_age_ticks": 3.0,
+          "primary_task_stall_ticks": 0.0,
+          "temperature_range_deviation_c": 0.0,
+          "temperature_stuck_flag": 0.0,
+          "voltage_range_deviation_v": 0.0,
+          "current_range_deviation_a": 0.0,
+          "communication_loss_flag": 1.0,
+          "secondary_task_stall_ticks": 0.0
+        },
+        "explanation": "Advisory Gaussian Naive Bayes classification from extracted telemetry features; recovery remains governed by deterministic policy."
+      },
+      "risk_assessment": {
+        "score": 63.8,
+        "level": "HIGH",
+        "severity": "HIGH",
+        "impact_factor": 0.85,
+        "classifier_confidence_factor": 1.0,
+        "formula": "100 * max(severity/4, compound_fault_override) * impact * max(0.65, confidence)",
+        "interpretation": "Heuristic triage score for prioritising simulated incidents; not a calibrated failure probability or safety risk assessment."
+      }
+    },
+    {
+      "run_id": "multiple_faults",
+      "summary": {
+        "scenario": "multiple_faults",
+        "terminal_state": "SAFE_MODE",
+        "primary_cause": "COMPOUND_FAULT",
+        "recovery_action": "ENTER_SAFE_MODE",
+        "recovery_status": "SAFE_MODE_ENTERED",
+        "recovery_attempts": 0,
+        "verified_cycles": 0,
+        "total_ticks": 5,
+        "detected_faults": [
+          "SENSOR_OUT_OF_RANGE",
+          "COMMUNICATION_TIMEOUT"
+        ]
+      },
+      "ml_advisory": {
+        "prediction": "COMPOUND_FAULT",
+        "confidence": 1.0,
+        "probabilities": {},
+        "features": {
+          "temperature_age_ticks": 0.0,
+          "temperature_stale_flag": 0.0,
+          "communication_age_ticks": 1001.0,
+          "primary_task_stall_ticks": 0.0,
+          "temperature_range_deviation_c": 25.0,
+          "temperature_stuck_flag": 0.0,
+          "voltage_range_deviation_v": 0.0,
+          "current_range_deviation_a": 0.0,
+          "communication_loss_flag": 1.0,
+          "secondary_task_stall_ticks": 0.0
+        },
+        "explanation": "Multiple deterministic fault rules fired; compound-fault handling overrides single-class ML advice."
+      },
+      "risk_assessment": {
+        "score": 100.0,
+        "level": "CRITICAL",
+        "severity": "CRITICAL",
+        "impact_factor": 1.0,
+        "classifier_confidence_factor": 1.0,
+        "formula": "100 * max(severity/4, compound_fault_override) * impact * max(0.65, confidence)",
+        "interpretation": "Heuristic triage score for prioritising simulated incidents; not a calibrated failure probability or safety risk assessment."
+      }
+    },
+    {
+      "run_id": "multiple_task_hangs",
+      "summary": {
+        "scenario": "multiple_task_hangs",
+        "terminal_state": "SAFE_MODE",
+        "primary_cause": "COMPOUND_FAULT",
+        "recovery_action": "ENTER_SAFE_MODE",
+        "recovery_status": "SAFE_MODE_ENTERED",
+        "recovery_attempts": 0,
+        "verified_cycles": 0,
+        "total_ticks": 7,
+        "detected_faults": [
+          "TASK_HANG",
+          "TASK_HANG"
+        ]
+      },
+      "ml_advisory": {
+        "prediction": "COMPOUND_FAULT",
+        "confidence": 1.0,
+        "probabilities": {},
+        "features": {
+          "temperature_age_ticks": 0.0,
+          "temperature_stale_flag": 0.0,
+          "communication_age_ticks": 0.0,
+          "primary_task_stall_ticks": 3.0,
+          "temperature_range_deviation_c": 0.0,
+          "temperature_stuck_flag": 0.0,
+          "voltage_range_deviation_v": 0.0,
+          "current_range_deviation_a": 0.0,
+          "communication_loss_flag": 0.0,
+          "secondary_task_stall_ticks": 3.0
+        },
+        "explanation": "Multiple deterministic fault rules fired; compound-fault handling overrides single-class ML advice."
+      },
+      "risk_assessment": {
+        "score": 100.0,
+        "level": "CRITICAL",
+        "severity": "CRITICAL",
+        "impact_factor": 1.0,
+        "classifier_confidence_factor": 1.0,
+        "formula": "100 * max(severity/4, compound_fault_override) * impact * max(0.65, confidence)",
+        "interpretation": "Heuristic triage score for prioritising simulated incidents; not a calibrated failure probability or safety risk assessment."
+      }
+    },
+    {
+      "run_id": "nominal",
+      "summary": {
+        "scenario": "nominal",
+        "terminal_state": "NORMAL",
+        "primary_cause": "NO_FAULT_DETECTED",
+        "recovery_action": "NONE",
+        "recovery_status": "NOT_REQUIRED",
+        "recovery_attempts": 0,
+        "verified_cycles": 0,
+        "total_ticks": 30,
+        "detected_faults": []
+      },
+      "ml_advisory": {
+        "prediction": "NORMAL",
+        "confidence": 0.9999936662526507,
+        "probabilities": {
+          "COMMUNICATION_TIMEOUT": 2.7332717548110054e-24,
+          "NORMAL": 0.9999936662526507,
+          "SENSOR_OUT_OF_RANGE": 3.5684623032623364e-09,
+          "SENSOR_STUCK": 1.4801147812923415e-16,
+          "SENSOR_TIMEOUT": 1.2999183696096736e-20,
+          "TASK_HANG": 6.330178886773855e-06
+        },
+        "features": {
+          "temperature_age_ticks": 0.0,
+          "temperature_stale_flag": 0.0,
+          "communication_age_ticks": 0.0,
+          "primary_task_stall_ticks": 0.0,
+          "temperature_range_deviation_c": 0.0,
+          "temperature_stuck_flag": 0.0,
+          "voltage_range_deviation_v": 0.0,
+          "current_range_deviation_a": 0.0,
+          "communication_loss_flag": 0.0,
+          "secondary_task_stall_ticks": 0.0
+        },
+        "explanation": "Advisory Gaussian Naive Bayes classification from extracted telemetry features; recovery remains governed by deterministic policy."
+      },
+      "risk_assessment": {
+        "score": 1.2,
+        "level": "LOW",
+        "severity": "LOW",
+        "impact_factor": 0.05,
+        "classifier_confidence_factor": 1.0,
+        "formula": "100 * max(severity/4, compound_fault_override) * impact * max(0.65, confidence)",
+        "interpretation": "Heuristic triage score for prioritising simulated incidents; not a calibrated failure probability or safety risk assessment."
+      }
+    },
+    {
+      "run_id": "recovery_failure",
+      "summary": {
+        "scenario": "recovery_failure",
+        "terminal_state": "SAFE_MODE",
+        "primary_cause": "TASK_PROGRESS_FAILURE",
+        "recovery_action": "RESTART_TASK",
+        "recovery_status": "SAFE_MODE_ENTERED",
+        "recovery_attempts": 2,
+        "verified_cycles": 0,
+        "total_ticks": 10,
+        "detected_faults": [
+          "TASK_HANG"
+        ]
+      },
+      "ml_advisory": {
+        "prediction": "TASK_HANG",
+        "confidence": 1.0,
+        "probabilities": {
+          "COMMUNICATION_TIMEOUT": 2.7576000900308278e-45,
+          "NORMAL": 1.8301354826860478e-17,
+          "SENSOR_OUT_OF_RANGE": 6.072169576561209e-29,
+          "SENSOR_STUCK": 1.1966705914863682e-39,
+          "SENSOR_TIMEOUT": 2.6337519966806892e-39,
+          "TASK_HANG": 1.0
+        },
+        "features": {
+          "temperature_age_ticks": 0.0,
+          "temperature_stale_flag": 0.0,
+          "communication_age_ticks": 0.0,
+          "primary_task_stall_ticks": 6.0,
+          "temperature_range_deviation_c": 0.0,
+          "temperature_stuck_flag": 0.0,
+          "voltage_range_deviation_v": 0.0,
+          "current_range_deviation_a": 0.0,
+          "communication_loss_flag": 0.0,
+          "secondary_task_stall_ticks": 0.0
+        },
+        "explanation": "Advisory Gaussian Naive Bayes classification from extracted telemetry features; recovery remains governed by deterministic policy."
+      },
+      "risk_assessment": {
+        "score": 67.5,
+        "level": "HIGH",
+        "severity": "HIGH",
+        "impact_factor": 0.9,
+        "classifier_confidence_factor": 1.0,
+        "formula": "100 * max(severity/4, compound_fault_override) * impact * max(0.65, confidence)",
+        "interpretation": "Heuristic triage score for prioritising simulated incidents; not a calibrated failure probability or safety risk assessment."
+      }
+    },
+    {
+      "run_id": "secondary_task_hang",
+      "summary": {
+        "scenario": "secondary_task_hang",
+        "terminal_state": "NORMAL",
+        "primary_cause": "TASK_PROGRESS_FAILURE",
+        "recovery_action": "RESTART_TASK",
+        "recovery_status": "VERIFIED",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "total_ticks": 10,
+        "detected_faults": [
+          "TASK_HANG"
+        ]
+      },
+      "ml_advisory": {
+        "prediction": "TASK_HANG",
+        "confidence": 0.97077616127682,
+        "probabilities": {
+          "COMMUNICATION_TIMEOUT": 2.4880884230396458e-23,
+          "NORMAL": 0.02922375371814197,
+          "SENSOR_OUT_OF_RANGE": 8.500503363774633e-08,
+          "SENSOR_STUCK": 4.370482684645748e-15,
+          "SENSOR_TIMEOUT": 8.823015141704812e-20,
+          "TASK_HANG": 0.97077616127682
+        },
+        "features": {
+          "temperature_age_ticks": 0.0,
+          "temperature_stale_flag": 0.0,
+          "communication_age_ticks": 0.0,
+          "primary_task_stall_ticks": 0.0,
+          "temperature_range_deviation_c": 0.0,
+          "temperature_stuck_flag": 0.0,
+          "voltage_range_deviation_v": 0.0,
+          "current_range_deviation_a": 0.0,
+          "communication_loss_flag": 0.0,
+          "secondary_task_stall_ticks": 3.0
+        },
+        "explanation": "Advisory Gaussian Naive Bayes classification from extracted telemetry features; recovery remains governed by deterministic policy."
+      },
+      "risk_assessment": {
+        "score": 65.5,
+        "level": "HIGH",
+        "severity": "HIGH",
+        "impact_factor": 0.9,
+        "classifier_confidence_factor": 0.9708,
+        "formula": "100 * max(severity/4, compound_fault_override) * impact * max(0.65, confidence)",
+        "interpretation": "Heuristic triage score for prioritising simulated incidents; not a calibrated failure probability or safety risk assessment."
+      }
+    },
+    {
+      "run_id": "sensor_out_of_range",
+      "summary": {
+        "scenario": "sensor_out_of_range",
+        "terminal_state": "NORMAL",
+        "primary_cause": "SENSOR_VALUE_OUT_OF_RANGE",
+        "recovery_action": "QUARANTINE_SENSOR",
+        "recovery_status": "VERIFIED",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "total_ticks": 8,
+        "detected_faults": [
+          "SENSOR_OUT_OF_RANGE"
+        ]
+      },
+      "ml_advisory": {
+        "prediction": "SENSOR_OUT_OF_RANGE",
+        "confidence": 0.9999999937019224,
+        "probabilities": {
+          "COMMUNICATION_TIMEOUT": 8.87472861898333e-33,
+          "NORMAL": 6.286356207249402e-09,
+          "SENSOR_OUT_OF_RANGE": 0.9999999937019224,
+          "SENSOR_STUCK": 3.45284282276616e-22,
+          "SENSOR_TIMEOUT": 2.116474682926213e-26,
+          "TASK_HANG": 1.17213054166727e-11
+        },
+        "features": {
+          "temperature_age_ticks": 0.0,
+          "temperature_stale_flag": 0.0,
+          "communication_age_ticks": 0.0,
+          "primary_task_stall_ticks": 0.0,
+          "temperature_range_deviation_c": 25.0,
+          "temperature_stuck_flag": 0.0,
+          "voltage_range_deviation_v": 0.0,
+          "current_range_deviation_a": 0.0,
+          "communication_loss_flag": 0.0,
+          "secondary_task_stall_ticks": 0.0
+        },
+        "explanation": "Advisory Gaussian Naive Bayes classification from extracted telemetry features; recovery remains governed by deterministic policy."
+      },
+      "risk_assessment": {
+        "score": 63.7,
+        "level": "HIGH",
+        "severity": "HIGH",
+        "impact_factor": 0.85,
+        "classifier_confidence_factor": 1.0,
+        "formula": "100 * max(severity/4, compound_fault_override) * impact * max(0.65, confidence)",
+        "interpretation": "Heuristic triage score for prioritising simulated incidents; not a calibrated failure probability or safety risk assessment."
+      }
+    },
+    {
+      "run_id": "sensor_stuck",
+      "summary": {
+        "scenario": "sensor_stuck",
+        "terminal_state": "NORMAL",
+        "primary_cause": "SENSOR_STUCK_AT",
+        "recovery_action": "REINITIALIZE_SENSOR",
+        "recovery_status": "VERIFIED",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "total_ticks": 12,
+        "detected_faults": [
+          "SENSOR_STUCK"
+        ]
+      },
+      "ml_advisory": {
+        "prediction": "SENSOR_STUCK",
+        "confidence": 1.0,
+        "probabilities": {
+          "COMMUNICATION_TIMEOUT": 2.168233530917668e-78,
+          "NORMAL": 5.589620834417868e-28,
+          "SENSOR_OUT_OF_RANGE": 3.1287886975181733e-59,
+          "SENSOR_STUCK": 1.0,
+          "SENSOR_TIMEOUT": 5.230119075013398e-57,
+          "TASK_HANG": 9.631534235620936e-41
+        },
+        "features": {
+          "temperature_age_ticks": 0.0,
+          "temperature_stale_flag": 0.0,
+          "communication_age_ticks": 0.0,
+          "primary_task_stall_ticks": 0.0,
+          "temperature_range_deviation_c": 0.0,
+          "temperature_stuck_flag": 1.0,
+          "voltage_range_deviation_v": 0.0,
+          "current_range_deviation_a": 0.0,
+          "communication_loss_flag": 0.0,
+          "secondary_task_stall_ticks": 0.0
+        },
+        "explanation": "Advisory Gaussian Naive Bayes classification from extracted telemetry features; recovery remains governed by deterministic policy."
+      },
+      "risk_assessment": {
+        "score": 32.5,
+        "level": "MODERATE",
+        "severity": "MEDIUM",
+        "impact_factor": 0.65,
+        "classifier_confidence_factor": 1.0,
+        "formula": "100 * max(severity/4, compound_fault_override) * impact * max(0.65, confidence)",
+        "interpretation": "Heuristic triage score for prioritising simulated incidents; not a calibrated failure probability or safety risk assessment."
+      }
+    },
+    {
+      "run_id": "sensor_timeout",
+      "summary": {
+        "scenario": "sensor_timeout",
+        "terminal_state": "NORMAL",
+        "primary_cause": "SENSOR_DATA_TIMEOUT",
+        "recovery_action": "RESTART_SENSOR",
+        "recovery_status": "VERIFIED",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "total_ticks": 10,
+        "detected_faults": [
+          "SENSOR_TIMEOUT"
+        ]
+      },
+      "ml_advisory": {
+        "prediction": "SENSOR_TIMEOUT",
+        "confidence": 1.0,
+        "probabilities": {
+          "COMMUNICATION_TIMEOUT": 2.7386350317589782e-65,
+          "NORMAL": 2.1113907948008404e-46,
+          "SENSOR_OUT_OF_RANGE": 6.573801954304844e-62,
+          "SENSOR_STUCK": 4.151555386029032e-55,
+          "SENSOR_TIMEOUT": 1.0,
+          "TASK_HANG": 3.6577990577384684e-64
+        },
+        "features": {
+          "temperature_age_ticks": 3.0,
+          "temperature_stale_flag": 1.0,
+          "communication_age_ticks": 0.0,
+          "primary_task_stall_ticks": 0.0,
+          "temperature_range_deviation_c": 0.0,
+          "temperature_stuck_flag": 0.0,
+          "voltage_range_deviation_v": 0.0,
+          "current_range_deviation_a": 0.0,
+          "communication_loss_flag": 0.0,
+          "secondary_task_stall_ticks": 0.0
+        },
+        "explanation": "Advisory Gaussian Naive Bayes classification from extracted telemetry features; recovery remains governed by deterministic policy."
+      },
+      "risk_assessment": {
+        "score": 56.2,
+        "level": "HIGH",
+        "severity": "HIGH",
+        "impact_factor": 0.75,
+        "classifier_confidence_factor": 1.0,
+        "formula": "100 * max(severity/4, compound_fault_override) * impact * max(0.65, confidence)",
+        "interpretation": "Heuristic triage score for prioritising simulated incidents; not a calibrated failure probability or safety risk assessment."
+      }
+    },
+    {
+      "run_id": "task_hang",
+      "summary": {
+        "scenario": "task_hang",
+        "terminal_state": "NORMAL",
+        "primary_cause": "TASK_PROGRESS_FAILURE",
+        "recovery_action": "RESTART_TASK",
+        "recovery_status": "VERIFIED",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "total_ticks": 10,
+        "detected_faults": [
+          "TASK_HANG"
+        ]
+      },
+      "ml_advisory": {
+        "prediction": "TASK_HANG",
+        "confidence": 0.9983986505933148,
+        "probabilities": {
+          "COMMUNICATION_TIMEOUT": 3.6519908225915267e-28,
+          "NORMAL": 0.001601349405478717,
+          "SENSOR_OUT_OF_RANGE": 1.2064078765471924e-12,
+          "SENSOR_STUCK": 9.718045727570271e-21,
+          "SENSOR_TIMEOUT": 9.106693272488511e-24,
+          "TASK_HANG": 0.9983986505933148
+        },
+        "features": {
+          "temperature_age_ticks": 0.0,
+          "temperature_stale_flag": 0.0,
+          "communication_age_ticks": 0.0,
+          "primary_task_stall_ticks": 3.0,
+          "temperature_range_deviation_c": 0.0,
+          "temperature_stuck_flag": 0.0,
+          "voltage_range_deviation_v": 0.0,
+          "current_range_deviation_a": 0.0,
+          "communication_loss_flag": 0.0,
+          "secondary_task_stall_ticks": 0.0
+        },
+        "explanation": "Advisory Gaussian Naive Bayes classification from extracted telemetry features; recovery remains governed by deterministic policy."
+      },
+      "risk_assessment": {
+        "score": 67.4,
+        "level": "HIGH",
+        "severity": "HIGH",
+        "impact_factor": 0.9,
+        "classifier_confidence_factor": 0.9984,
+        "formula": "100 * max(severity/4, compound_fault_override) * impact * max(0.65, confidence)",
+        "interpretation": "Heuristic triage score for prioritising simulated incidents; not a calibrated failure probability or safety risk assessment."
+      }
+    }
+  ]
+}

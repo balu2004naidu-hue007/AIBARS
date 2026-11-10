@@ -1,0 +1,11 @@
+{
+  "scenario": "communication_timeout",
+  "terminal_state": "NORMAL",
+  "primary_cause": "COMMUNICATION_HEARTBEAT_TIMEOUT",
+  "recovery_action": "RESTART_COMMUNICATION",
+  "recovery_status": "VERIFIED",
+  "recovery_attempts": 1,
+  "verified_cycles": 3,
+  "total_ticks": 10,
+  "detected_faults": ["COMMUNICATION_TIMEOUT"]
+}

@@ -1,0 +1,11 @@
+{
+  "episode": 3,
+  "scenario": "task_hang",
+  "primary_cause": "TASK_PROGRESS_FAILURE",
+  "terminal_state": "NORMAL",
+  "recovery_status": "VERIFIED",
+  "recovery_attempts": 1,
+  "verified_cycles": 3,
+  "start_tick": 93,
+  "end_tick": 102
+}

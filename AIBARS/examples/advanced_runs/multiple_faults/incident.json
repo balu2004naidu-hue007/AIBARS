@@ -1,0 +1,30 @@
+{
+  "primary_cause": "COMPOUND_FAULT",
+  "severity": "CRITICAL",
+  "rule_match_score": 0.97,
+  "rationale": "More than one independent fault rule fired in the same observation window; the system chooses containment instead of attempting isolated recovery.",
+  "recommended_action": "ENTER_SAFE_MODE",
+  "terminal_state": "SAFE_MODE",
+  "recovery_status": "SAFE_MODE_ENTERED",
+  "recovery_explanation": "Multiple independent faults were present; automatic recovery was withheld and the simulated system entered safe mode.",
+  "recovery_attempts": 0,
+  "verified_cycles": 0,
+  "faults": [
+    {"code": "SENSOR_OUT_OF_RANGE", "severity": "HIGH", "evidence": "out-of-range telemetry: temperature=150 C (allowed -40..125), voltage=24 V (allowed 9..36), current=4.6 A (allowed 0..100)"},
+    {"code": "COMMUNICATION_TIMEOUT", "severity": "HIGH", "evidence": "communication status=lost, heartbeat age=1001 ticks, threshold=3 ticks"}
+  ],
+  "recent_events": [
+    {"sequence":1,"tick":0,"component":"supervisor","event":"run_started","detail":"scenario=multiple_faults"},
+    {"sequence":2,"tick":1,"component":"telemetry","event":"sample_observed","detail":"temperature=34.350000 C, voltage=24.080000 V, current=4.120000 A, temperature_age=0 ticks, communication_age=0 ticks, communication_ok=true, primary_task_progressing=true, primary_task_stall=0 ticks, secondary_task_progressing=true, secondary_task_stall=0 ticks"},
+    {"sequence":3,"tick":2,"component":"telemetry","event":"sample_observed","detail":"temperature=34.700000 C, voltage=24.160000 V, current=4.240000 A, temperature_age=0 ticks, communication_age=0 ticks, communication_ok=true, primary_task_progressing=true, primary_task_stall=0 ticks, secondary_task_progressing=true, secondary_task_stall=0 ticks"},
+    {"sequence":4,"tick":3,"component":"telemetry","event":"sample_observed","detail":"temperature=35.050000 C, voltage=24.240000 V, current=4.360000 A, temperature_age=0 ticks, communication_age=0 ticks, communication_ok=true, primary_task_progressing=true, primary_task_stall=0 ticks, secondary_task_progressing=true, secondary_task_stall=0 ticks"},
+    {"sequence":5,"tick":4,"component":"telemetry","event":"sample_observed","detail":"temperature=35.400000 C, voltage=24.320000 V, current=4.480000 A, temperature_age=0 ticks, communication_age=0 ticks, communication_ok=true, primary_task_progressing=true, primary_task_stall=0 ticks, secondary_task_progressing=true, secondary_task_stall=0 ticks"},
+    {"sequence":6,"tick":5,"component":"fault_injector","event":"fault_injected","detail":"scenario=multiple_faults"},
+    {"sequence":7,"tick":5,"component":"telemetry","event":"sample_observed","detail":"temperature=150.000000 C, voltage=24.000000 V, current=4.600000 A, temperature_age=0 ticks, communication_age=1001 ticks, communication_ok=false, primary_task_progressing=true, primary_task_stall=0 ticks, secondary_task_progressing=true, secondary_task_stall=0 ticks"},
+    {"sequence":8,"tick":5,"component":"fault_detector","event":"fault_detected","detail":"SENSOR_OUT_OF_RANGE | out-of-range telemetry: temperature=150 C (allowed -40..125), voltage=24 V (allowed 9..36), current=4.6 A (allowed 0..100)"},
+    {"sequence":9,"tick":5,"component":"fault_detector","event":"fault_detected","detail":"COMMUNICATION_TIMEOUT | communication status=lost, heartbeat age=1001 ticks, threshold=3 ticks"},
+    {"sequence":10,"tick":5,"component":"diagnosis","event":"diagnosis_completed","detail":"COMPOUND_FAULT | More than one independent fault rule fired in the same observation window; the system chooses containment instead of attempting isolated recovery."},
+    {"sequence":11,"tick":5,"component":"recovery","event":"safe_mode_entered","detail":"Multiple independent faults were present; automatic recovery was withheld and the simulated system entered safe mode."},
+    {"sequence":12,"tick":5,"component":"supervisor","event":"run_completed","detail":"terminal_state=SAFE_MODE, recovery=SAFE_MODE_ENTERED"}
+  ]
+}

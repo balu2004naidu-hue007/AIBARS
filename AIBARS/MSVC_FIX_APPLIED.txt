@@ -1,0 +1,13 @@
+AIBARS v2.3.2 — MSVC portability patch
+
+The file src/main.cpp directly includes <sstream>, which defines
+std::ostringstream. This avoids reliance on transitive standard-library
+includes and addresses the MSVC diagnostic previously reported at the
+telemetryDetail() stream declaration.
+
+Use this extracted AIBARS folder as a fresh copy. Do not rerun the older
+AIBARS_Project folder from the previous ZIP.
+
+The project was rebuilt and tested from a clean extraction with GCC 14.2
+and Clang 17. The installed MSVC toolset on the user's Windows laptop still
+requires its own acceptance run; MSVC compilation has not been claimed here.

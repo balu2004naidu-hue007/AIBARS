@@ -1,0 +1,61 @@
+{
+  "test": "fixed_interval_2_second_autonomous_smoke",
+  "requested_interval_seconds": 2.0,
+  "telemetry_tick_ms": 100,
+  "effective_interval_cycles": 20,
+  "effective_interval_seconds": 2,
+  "scheduler_event": {
+    "sequence": 22,
+    "tick": 20,
+    "component": "fault_scheduler",
+    "event": "fault_scheduled",
+    "detail": "automatic scheduler selected scenario=task_hang, episode=1, healthy_interval_cycles=20, healthy_interval_seconds=2.000000, severity_class=recoverable_test"
+  },
+  "fault_activation_event": {
+    "sequence": 28,
+    "tick": 25,
+    "component": "fault_injector",
+    "event": "fault_activated",
+    "detail": "automatic scheduler activated task_hang on the simulated device"
+  },
+  "activation_warmup_samples": 5,
+  "recovery_verified_event": {
+    "sequence": 41,
+    "tick": 30,
+    "component": "recovery",
+    "event": "recovery_verified",
+    "detail": "Recovery passed 3 consecutive healthy verification cycles."
+  },
+  "session_summary": {
+    "session_state": "COMPLETED",
+    "device_id": "AIBARS-AUTO-ECU-01",
+    "session_cycles": 21,
+    "global_ticks": 31,
+    "incidents": 1,
+    "verified_recoveries": 1,
+    "safe_mode_entries": 0,
+    "seed": 42,
+    "interval_mode": "FIXED",
+    "fault_interval_min_cycles": 20,
+    "fault_interval_max_cycles": 20,
+    "tick_delay_ms": 100,
+    "fault_interval_min_seconds": 2,
+    "fault_interval_max_seconds": 2,
+    "episodes": [
+      {
+        "episode": 1,
+        "scenario": "task_hang",
+        "primary_cause": "TASK_PROGRESS_FAILURE",
+        "terminal_state": "NORMAL",
+        "recovery_status": "VERIFIED",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "start_tick": 21,
+        "end_tick": 30
+      }
+    ]
+  },
+  "status_interval_mode": "FIXED",
+  "elapsed_wall_seconds_including_warmup_detection_and_recovery": 3.115,
+  "passed": true
+}

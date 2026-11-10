@@ -1,0 +1,11 @@
+{
+  "scenario": "sensor_timeout",
+  "terminal_state": "NORMAL",
+  "primary_cause": "SENSOR_DATA_TIMEOUT",
+  "recovery_action": "RESTART_SENSOR",
+  "recovery_status": "VERIFIED",
+  "recovery_attempts": 1,
+  "verified_cycles": 3,
+  "total_ticks": 10,
+  "detected_faults": ["SENSOR_TIMEOUT"]
+}

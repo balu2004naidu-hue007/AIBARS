@@ -1,0 +1,45 @@
+{
+  "profile_name": "AIBARS Balanced Embedded Profile",
+  "detection": {
+    "minimum_temperature_c": -40.0,
+    "maximum_temperature_c": 125.0,
+    "minimum_voltage_v": 9.0,
+    "maximum_voltage_v": 36.0,
+    "minimum_current_a": 0.0,
+    "maximum_current_a": 100.0,
+    "sensor_timeout_ticks": 3,
+    "communication_timeout_ticks": 3,
+    "stuck_sample_count": 5,
+    "task_stall_ticks": 3
+  },
+  "recovery": {
+    "maximum_attempts": 2,
+    "required_healthy_cycles": 3,
+    "safe_mode_on_compound_fault": true,
+    "safe_mode_on_recovery_exhaustion": true,
+    "retry_backoff_ticks": 1
+  },
+  "risk": {
+    "low_max": 24,
+    "moderate_max": 49,
+    "high_max": 74,
+    "impact": {
+      "SENSOR_STUCK": 0.65,
+      "SENSOR_TIMEOUT": 0.75,
+      "SENSOR_OUT_OF_RANGE": 0.85,
+      "COMMUNICATION_TIMEOUT": 0.85,
+      "TASK_HANG": 0.9,
+      "COMPOUND_FAULT": 1.0,
+      "NORMAL": 0.05
+    }
+  },
+  "fleet": {
+    "workers": 4,
+    "device_ids": [
+      "ECU-SIM-01",
+      "ECU-SIM-02",
+      "EDGE-SIM-01",
+      "CTRL-SIM-01"
+    ]
+  }
+}

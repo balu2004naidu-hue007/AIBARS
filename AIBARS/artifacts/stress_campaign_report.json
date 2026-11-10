@@ -1,0 +1,33 @@
+{
+  "campaign": "seeded randomized concurrent regression",
+  "seed": 20261109,
+  "iterations": 48,
+  "workers": 4,
+  "duration_seconds": 0.0416,
+  "scenario_distribution": {
+    "sensor_stuck": 11,
+    "nominal": 3,
+    "multiple_task_hangs": 6,
+    "communication_timeout": 4,
+    "recovery_failure": 4,
+    "secondary_task_hang": 4,
+    "task_hang": 7,
+    "sensor_timeout": 3,
+    "sensor_out_of_range": 5,
+    "multiple_faults": 1
+  },
+  "terminal_states": {
+    "NORMAL": 37,
+    "SAFE_MODE": 11
+  },
+  "recovery_statuses": {
+    "VERIFIED": 34,
+    "NOT_REQUIRED": 3,
+    "SAFE_MODE_ENTERED": 11
+  },
+  "max_recovery_attempts_observed": 2,
+  "completed_runs": 48,
+  "failures": [],
+  "passed": true,
+  "scope_note": "All runs are local simulator processes with synthetic fault injection; not physical hardware stress testing."
+}

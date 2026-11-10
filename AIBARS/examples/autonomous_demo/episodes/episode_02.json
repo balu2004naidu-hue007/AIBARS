@@ -1,0 +1,11 @@
+{
+  "episode": 2,
+  "scenario": "sensor_stuck",
+  "primary_cause": "SENSOR_STUCK_AT",
+  "terminal_state": "NORMAL",
+  "recovery_status": "VERIFIED",
+  "recovery_attempts": 1,
+  "verified_cycles": 3,
+  "start_tick": 55,
+  "end_tick": 66
+}

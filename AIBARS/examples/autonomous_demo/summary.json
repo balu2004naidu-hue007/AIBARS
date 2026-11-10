@@ -1,0 +1,11 @@
+{
+  "scenario": "autonomous_session",
+  "terminal_state": "NORMAL",
+  "primary_cause": "TASK_PROGRESS_FAILURE",
+  "recovery_action": "AUTOMATIC_POLICY",
+  "recovery_status": "SESSION_COMPLETED",
+  "recovery_attempts": 0,
+  "verified_cycles": 3,
+  "total_ticks": 103,
+  "detected_faults": []
+}

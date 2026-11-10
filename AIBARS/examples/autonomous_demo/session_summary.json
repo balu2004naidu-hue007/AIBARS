@@ -1,0 +1,21 @@
+{
+  "session_state": "COMPLETED",
+  "device_id": "AIBARS-AUTO-ECU-01",
+  "session_cycles": 71,
+  "global_ticks": 103,
+  "incidents": 3,
+  "verified_recoveries": 3,
+  "safe_mode_entries": 0,
+  "seed": 20261110,
+  "interval_mode": "RANDOM",
+  "fault_interval_min_cycles": 20,
+  "fault_interval_max_cycles": 25,
+  "tick_delay_ms": 100,
+  "fault_interval_min_seconds": 2,
+  "fault_interval_max_seconds": 2.5,
+  "episodes": [
+    {"episode": 1, "scenario": "communication_timeout", "primary_cause": "COMMUNICATION_HEARTBEAT_TIMEOUT", "terminal_state": "NORMAL", "recovery_status": "VERIFIED", "recovery_attempts": 1, "verified_cycles": 3, "start_tick": 23, "end_tick": 32},
+    {"episode": 2, "scenario": "sensor_stuck", "primary_cause": "SENSOR_STUCK_AT", "terminal_state": "NORMAL", "recovery_status": "VERIFIED", "recovery_attempts": 1, "verified_cycles": 3, "start_tick": 55, "end_tick": 66},
+    {"episode": 3, "scenario": "task_hang", "primary_cause": "TASK_PROGRESS_FAILURE", "terminal_state": "NORMAL", "recovery_status": "VERIFIED", "recovery_attempts": 1, "verified_cycles": 3, "start_tick": 93, "end_tick": 102}
+  ]
+}

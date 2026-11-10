@@ -1,0 +1,18 @@
+{"sequence":1,"tick":0,"component":"supervisor","event":"run_started","detail":"scenario=sensor_out_of_range"}
+{"sequence":2,"tick":1,"component":"telemetry","event":"sample_observed","detail":"temperature=34.350000 C, voltage=24.080000 V, current=4.120000 A, temperature_age=0 ticks, communication_age=0 ticks, communication_ok=true, primary_task_progressing=true, primary_task_stall=0 ticks, secondary_task_progressing=true, secondary_task_stall=0 ticks"}
+{"sequence":3,"tick":2,"component":"telemetry","event":"sample_observed","detail":"temperature=34.700000 C, voltage=24.160000 V, current=4.240000 A, temperature_age=0 ticks, communication_age=0 ticks, communication_ok=true, primary_task_progressing=true, primary_task_stall=0 ticks, secondary_task_progressing=true, secondary_task_stall=0 ticks"}
+{"sequence":4,"tick":3,"component":"telemetry","event":"sample_observed","detail":"temperature=35.050000 C, voltage=24.240000 V, current=4.360000 A, temperature_age=0 ticks, communication_age=0 ticks, communication_ok=true, primary_task_progressing=true, primary_task_stall=0 ticks, secondary_task_progressing=true, secondary_task_stall=0 ticks"}
+{"sequence":5,"tick":4,"component":"telemetry","event":"sample_observed","detail":"temperature=35.400000 C, voltage=24.320000 V, current=4.480000 A, temperature_age=0 ticks, communication_age=0 ticks, communication_ok=true, primary_task_progressing=true, primary_task_stall=0 ticks, secondary_task_progressing=true, secondary_task_stall=0 ticks"}
+{"sequence":6,"tick":5,"component":"fault_injector","event":"fault_injected","detail":"scenario=sensor_out_of_range"}
+{"sequence":7,"tick":5,"component":"telemetry","event":"sample_observed","detail":"temperature=150.000000 C, voltage=24.000000 V, current=4.600000 A, temperature_age=0 ticks, communication_age=0 ticks, communication_ok=true, primary_task_progressing=true, primary_task_stall=0 ticks, secondary_task_progressing=true, secondary_task_stall=0 ticks"}
+{"sequence":8,"tick":5,"component":"fault_detector","event":"fault_detected","detail":"SENSOR_OUT_OF_RANGE | out-of-range telemetry: temperature=150 C (allowed -40..125), voltage=24 V (allowed 9..36), current=4.6 A (allowed 0..100)"}
+{"sequence":9,"tick":5,"component":"diagnosis","event":"diagnosis_completed","detail":"SENSOR_VALUE_OUT_OF_RANGE | At least one telemetry value exceeded its configured engineering range; quarantine the invalid input and reinitialize the simulated sensor path."}
+{"sequence":10,"tick":5,"component":"recovery","event":"recovery_attempt_started","detail":"attempt=1, action=QUARANTINE_SENSOR"}
+{"sequence":11,"tick":6,"component":"verification","event":"health_sample","detail":"temperature=36.1 C, voltage=24.08 V, current=4.72 A"}
+{"sequence":12,"tick":6,"component":"verification","event":"healthy_cycle","detail":"consecutive healthy cycle 1 of 3"}
+{"sequence":13,"tick":7,"component":"verification","event":"health_sample","detail":"temperature=36.45 C, voltage=24.16 V, current=4 A"}
+{"sequence":14,"tick":7,"component":"verification","event":"healthy_cycle","detail":"consecutive healthy cycle 2 of 3"}
+{"sequence":15,"tick":8,"component":"verification","event":"health_sample","detail":"temperature=36.8 C, voltage=24.24 V, current=4.12 A"}
+{"sequence":16,"tick":8,"component":"verification","event":"healthy_cycle","detail":"consecutive healthy cycle 3 of 3"}
+{"sequence":17,"tick":8,"component":"recovery","event":"recovery_verified","detail":"Recovery passed 3 consecutive healthy verification cycles."}
+{"sequence":18,"tick":8,"component":"supervisor","event":"run_completed","detail":"terminal_state=NORMAL, recovery=VERIFIED"}

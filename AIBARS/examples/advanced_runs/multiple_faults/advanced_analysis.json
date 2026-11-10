@@ -1,0 +1,29 @@
+{
+  "ml_advisory": {
+    "prediction": "COMPOUND_FAULT",
+    "confidence": 1.0,
+    "probabilities": {},
+    "features": {
+      "temperature_age_ticks": 0.0,
+      "temperature_stale_flag": 0.0,
+      "communication_age_ticks": 1001.0,
+      "primary_task_stall_ticks": 0.0,
+      "temperature_range_deviation_c": 25.0,
+      "temperature_stuck_flag": 0.0,
+      "voltage_range_deviation_v": 0.0,
+      "current_range_deviation_a": 0.0,
+      "communication_loss_flag": 1.0,
+      "secondary_task_stall_ticks": 0.0
+    },
+    "explanation": "Multiple deterministic fault rules fired; compound-fault handling overrides single-class ML advice."
+  },
+  "risk_assessment": {
+    "score": 100.0,
+    "level": "CRITICAL",
+    "severity": "CRITICAL",
+    "impact_factor": 1.0,
+    "classifier_confidence_factor": 1.0,
+    "formula": "100 * max(severity/4, compound_fault_override) * impact * max(0.65, confidence)",
+    "interpretation": "Heuristic triage score for prioritising simulated incidents; not a calibrated failure probability or safety risk assessment."
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "algorithm": "Gaussian Naive Bayes",
+  "feature_names": [
+    "temperature_age_ticks",
+    "temperature_stale_flag",
+    "communication_age_ticks",
+    "primary_task_stall_ticks",
+    "temperature_range_deviation_c",
+    "temperature_stuck_flag",
+    "voltage_range_deviation_v",
+    "current_range_deviation_a",
+    "communication_loss_flag",
+    "secondary_task_stall_ticks"
+  ],
+  "classes": [
+    "NORMAL",
+    "SENSOR_TIMEOUT",
+    "SENSOR_STUCK",
+    "SENSOR_OUT_OF_RANGE",
+    "COMMUNICATION_TIMEOUT",
+    "TASK_HANG"
+  ],
+  "dataset": "synthetic labelled fault telemetry; generated deterministically",
+  "samples_total": 1440,
+  "training_samples": 1152,
+  "test_samples": 288,
+  "split": "stratified 80/20 hold-out",
+  "seed": 20261109,
+  "accuracy": 1.0,
+  "confusion_matrix": {
+    "NORMAL": {
+      "NORMAL": 48,
+      "SENSOR_TIMEOUT": 0,
+      "SENSOR_STUCK": 0,
+      "SENSOR_OUT_OF_RANGE": 0,
+      "COMMUNICATION_TIMEOUT": 0,
+      "TASK_HANG": 0
+    },
+    "SENSOR_TIMEOUT": {
+      "NORMAL": 0,
+      "SENSOR_TIMEOUT": 48,
+      "SENSOR_STUCK": 0,
+      "SENSOR_OUT_OF_RANGE": 0,
+      "COMMUNICATION_TIMEOUT": 0,
+      "TASK_HANG": 0
+    },
+    "SENSOR_STUCK": {
+      "NORMAL": 0,
+      "SENSOR_TIMEOUT": 0,
+      "SENSOR_STUCK": 48,
+      "SENSOR_OUT_OF_RANGE": 0,
+      "COMMUNICATION_TIMEOUT": 0,
+      "TASK_HANG": 0
+    },
+    "SENSOR_OUT_OF_RANGE": {
+      "NORMAL": 0,
+      "SENSOR_TIMEOUT": 0,
+      "SENSOR_STUCK": 0,
+      "SENSOR_OUT_OF_RANGE": 48,
+      "COMMUNICATION_TIMEOUT": 0,
+      "TASK_HANG": 0
+    },
+    "COMMUNICATION_TIMEOUT": {
+      "NORMAL": 0,
+      "SENSOR_TIMEOUT": 0,
+      "SENSOR_STUCK": 0,
+      "SENSOR_OUT_OF_RANGE": 0,
+      "COMMUNICATION_TIMEOUT": 48,
+      "TASK_HANG": 0
+    },
+    "TASK_HANG": {
+      "NORMAL": 0,
+      "SENSOR_TIMEOUT": 0,
+      "SENSOR_STUCK": 0,
+      "SENSOR_OUT_OF_RANGE": 0,
+      "COMMUNICATION_TIMEOUT": 0,
+      "TASK_HANG": 48
+    }
+  },
+  "per_class_metrics": {
+    "NORMAL": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 48
+    },
+    "SENSOR_TIMEOUT": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 48
+    },
+    "SENSOR_STUCK": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 48
+    },
+    "SENSOR_OUT_OF_RANGE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 48
+    },
+    "COMMUNICATION_TIMEOUT": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 48
+    },
+    "TASK_HANG": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 48
+    }
+  },
+  "limitations": [
+    "Metrics measure separation of generated synthetic signatures only.",
+    "They are not field accuracy and do not establish real-world fault prediction performance.",
+    "Classifier output is advisory; deterministic C++ policy controls recovery."
+  ]
+}

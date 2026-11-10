@@ -1,0 +1,36 @@
+{
+  "ml_advisory": {
+    "prediction": "TASK_HANG",
+    "confidence": 0.9983986505933148,
+    "probabilities": {
+      "COMMUNICATION_TIMEOUT": 3.6519908225915267e-28,
+      "NORMAL": 0.001601349405478717,
+      "SENSOR_OUT_OF_RANGE": 1.2064078765471924e-12,
+      "SENSOR_STUCK": 9.718045727570271e-21,
+      "SENSOR_TIMEOUT": 9.106693272488511e-24,
+      "TASK_HANG": 0.9983986505933148
+    },
+    "features": {
+      "temperature_age_ticks": 0.0,
+      "temperature_stale_flag": 0.0,
+      "communication_age_ticks": 0.0,
+      "primary_task_stall_ticks": 3.0,
+      "temperature_range_deviation_c": 0.0,
+      "temperature_stuck_flag": 0.0,
+      "voltage_range_deviation_v": 0.0,
+      "current_range_deviation_a": 0.0,
+      "communication_loss_flag": 0.0,
+      "secondary_task_stall_ticks": 0.0
+    },
+    "explanation": "Advisory Gaussian Naive Bayes classification from extracted telemetry features; recovery remains governed by deterministic policy."
+  },
+  "risk_assessment": {
+    "score": 67.4,
+    "level": "HIGH",
+    "severity": "HIGH",
+    "impact_factor": 0.9,
+    "classifier_confidence_factor": 0.9984,
+    "formula": "100 * max(severity/4, compound_fault_override) * impact * max(0.65, confidence)",
+    "interpretation": "Heuristic triage score for prioritising simulated incidents; not a calibrated failure probability or safety risk assessment."
+  }
+}

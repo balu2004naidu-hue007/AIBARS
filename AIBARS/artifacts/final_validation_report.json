@@ -1,0 +1,194 @@
+{
+  "release": "AIBARS v2.3.2",
+  "validation_date": "2026-11-10",
+  "scope": "Laptop-only C++/Python software simulation; no physical hardware validation",
+  "environment": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "cmake": "cmake version 3.31.6",
+    "gcc": "g++ (Debian 14.2.0-19) 14.2.0",
+    "clang": "clang version 17.0.0 (https://github.com/swiftlang/llvm-project.git 10999b6d034fe318f3d56c83bddb6572593a8bb0)",
+    "node": "v22.16.0"
+  },
+  "automated_tests": {
+    "cpp_core_checks": 9,
+    "cpp_ctest_targets_passed": 1,
+    "python_test_methods_passed": 24,
+    "gcc_build_ctest_and_python_suite": "passed in release-candidate audit (GCC 14.2; 24 Python tests)",
+    "clang_build_ctest_and_python_suite": "passed after direct <sstream> include",
+    "clean_source_package_rebuild": "passed",
+    "clang_build_ctest": "passed in release-candidate audit (Clang 17)",
+    "gcc_address_undefined_sanitizer_ctest": "passed in release-candidate audit (GCC 14.2; ASan + UBSan)"
+  },
+  "autonomous_operations_demo": {
+    "session_state": "COMPLETED",
+    "device_id": "AIBARS-AUTO-ECU-01",
+    "seed": 20261110,
+    "normal_monitoring_cycles": 71,
+    "global_ticks": 103,
+    "automatically_scheduled_incidents": 3,
+    "verified_recoveries": 3,
+    "safe_mode_entries": 0,
+    "interval_mode": "RANDOM",
+    "fault_interval_min_seconds": 2,
+    "fault_interval_max_seconds": 2.5,
+    "tick_delay_ms": 100,
+    "episodes": [
+      {
+        "episode": 1,
+        "scenario": "communication_timeout",
+        "primary_cause": "COMMUNICATION_HEARTBEAT_TIMEOUT",
+        "terminal_state": "NORMAL",
+        "recovery_status": "VERIFIED",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "start_tick": 23,
+        "end_tick": 32
+      },
+      {
+        "episode": 2,
+        "scenario": "sensor_stuck",
+        "primary_cause": "SENSOR_STUCK_AT",
+        "terminal_state": "NORMAL",
+        "recovery_status": "VERIFIED",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "start_tick": 55,
+        "end_tick": 66
+      },
+      {
+        "episode": 3,
+        "scenario": "task_hang",
+        "primary_cause": "TASK_PROGRESS_FAILURE",
+        "terminal_state": "NORMAL",
+        "recovery_status": "VERIFIED",
+        "recovery_attempts": 1,
+        "verified_cycles": 3,
+        "start_tick": 93,
+        "end_tick": 102
+      }
+    ],
+    "ml_risk_analysis_generated": 3
+  },
+  "fixed_interval_2_second_smoke_test": {
+    "passed": true,
+    "requested_interval_seconds": 2.0,
+    "tick_delay_ms": 100,
+    "effective_healthy_monitoring_cycles": 20,
+    "effective_interval_seconds": 2,
+    "scheduler_event": {
+      "sequence": 22,
+      "tick": 20,
+      "component": "fault_scheduler",
+      "event": "fault_scheduled",
+      "detail": "automatic scheduler selected scenario=task_hang, episode=1, healthy_interval_cycles=20, healthy_interval_seconds=2.000000, severity_class=recoverable_test"
+    },
+    "fault_activation_warmup_samples": 5,
+    "recovery_verified_event": {
+      "sequence": 41,
+      "tick": 30,
+      "component": "recovery",
+      "event": "recovery_verified",
+      "detail": "Recovery passed 3 consecutive healthy verification cycles."
+    },
+    "elapsed_wall_seconds_including_warmup_detection_and_recovery": 3.115,
+    "session_summary": {
+      "session_state": "COMPLETED",
+      "device_id": "AIBARS-AUTO-ECU-01",
+      "session_cycles": 21,
+      "global_ticks": 31,
+      "incidents": 1,
+      "verified_recoveries": 1,
+      "safe_mode_entries": 0,
+      "seed": 42,
+      "interval_mode": "FIXED",
+      "fault_interval_min_cycles": 20,
+      "fault_interval_max_cycles": 20,
+      "tick_delay_ms": 100,
+      "fault_interval_min_seconds": 2,
+      "fault_interval_max_seconds": 2,
+      "episodes": [
+        {
+          "episode": 1,
+          "scenario": "task_hang",
+          "primary_cause": "TASK_PROGRESS_FAILURE",
+          "terminal_state": "NORMAL",
+          "recovery_status": "VERIFIED",
+          "recovery_attempts": 1,
+          "verified_cycles": 3,
+          "start_tick": 21,
+          "end_tick": 30
+        }
+      ]
+    }
+  },
+  "manual_fault_injection_test_bench": {
+    "predefined_scenarios": 10,
+    "purpose": "Repeatable deterministic regression and focused fault demonstrations; separate from autonomous operating mode"
+  },
+  "stress_regression": {
+    "iterations": 48,
+    "workers": 4,
+    "passed": true,
+    "failures": [],
+    "maximum_recovery_attempts_observed": 2
+  },
+  "machine_learning": {
+    "algorithm": "Gaussian Naive Bayes",
+    "synthetic_samples": 1440,
+    "training_samples": 1152,
+    "holdout_samples": 288,
+    "holdout_accuracy": 1.0,
+    "qualification": "Generated synthetic telemetry only. This is not field accuracy and does not establish real-world fault prediction performance. The model is advisory; deterministic C++ policy remains the recovery authority."
+  },
+  "dashboard_and_api_checks": {
+    "autonomous_operations_panel": "included",
+    "seconds_based_fixed_and_random_interval_controls": "included",
+    "next_fault_schedule_countdown": "included",
+    "separate_manual_fault_injection_test_bench": "included",
+    "saved_autonomous_session_preview": "included",
+    "live_autonomous_start_stop_status": "tested",
+    "event_streaming": "tested",
+    "per_episode_ml_and_risk_enrichment": "tested",
+    "inline_javascript_syntax": "passed with Node.js --check",
+    "origin_validation": "tested",
+    "GET_start_rejected": "HTTP 405"
+  },
+  "acceptance_still_required_on_user_windows_machine": [
+    "Run RUN_AIBARS_WINDOWS.bat on the target Windows laptop.",
+    "Open the live dashboard in Chrome or Edge and start an autonomous session.",
+    "Confirm fixed 2.0-second or random interval timing, fault activation, recovery verification and monitoring resumption on that machine.",
+    "Resolve any local compiler, CMake or PATH differences if encountered."
+  ],
+  "explicit_non_claims": [
+    "All device, sensor, task and recovery behaviour is simulated.",
+    "No physical sensor, ECU, vehicle, industrial machine, FPGA or HIL validation.",
+    "No real-world labelled fault telemetry dataset or field ML accuracy.",
+    "No functional-safety certification or production deployment claim.",
+    "Autonomous monitoring is a bounded software simulation session, not a hard real-time embedded target."
+  ],
+  "msvc_portability_patch": {
+    "source_file": "src/main.cpp",
+    "change": "Added direct #include <sstream> for std::ostringstream telemetry formatting.",
+    "reason": "Avoid reliance on transitive standard-library includes reported by MSVC in the user screenshot.",
+    "msvc_validation": "pending on target Windows laptop; MSVC is unavailable in the development environment."
+  },
+  "release_candidate_audit": {
+    "archive_files": 126,
+    "sha256_manifest_entries_verified": 125,
+    "json_files_parsed": 49,
+    "jsonl_files_parsed": 11,
+    "markdown_local_links": "all resolved",
+    "dashboard_inline_javascript": "Node.js syntax check passed",
+    "credential_pattern_scan": "no candidate secrets detected",
+    "gcc_ctest": "passed",
+    "clang_ctest": "passed",
+    "asan_ubsan_ctest": "passed",
+    "python_test_methods": "24 passed",
+    "advanced_scenarios": "10 passed",
+    "autonomous_demo": "3 of 3 recoveries verified",
+    "seeded_stress_runs": "48 passed, zero invariant failures",
+    "windows_msvc_acceptance": "pending on target Windows machine",
+    "windows_default_browser_handoff": "pending on target Windows machine"
+  }
+}
