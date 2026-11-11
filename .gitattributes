@@ -6,7 +6,7 @@
 *.md text eol=lf
 *.bat text eol=crlf
 
-# Classify the AIBARS dashboard as C++ in GitHub language statistics.
-*.html linguist-language=C++
-**/*.html linguist-language=C++
-examples/dashboard.html linguist-language=C++
+# The large HTML dashboard is a generated presentation artifact, not the AIBARS implementation language.
+*.html linguist-detectable=false
+**/*.html linguist-detectable=false
+examples/dashboard.html linguist-detectable=false
