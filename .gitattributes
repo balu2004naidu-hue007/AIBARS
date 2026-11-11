@@ -6,7 +6,5 @@
 *.md text eol=lf
 *.bat text eol=crlf
 
-# The large HTML dashboard is a generated presentation artifact, not the AIBARS implementation language.
-*.html linguist-detectable=false
-**/*.html linguist-detectable=false
-examples/dashboard.html linguist-detectable=false
+# Explicit Linguist override for the root dashboard file.
+/AIBARS_DASHBOARD.html linguist-language=C++
