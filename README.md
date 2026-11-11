@@ -3,7 +3,8 @@
 **Release:** 2.3.2 — Time-configurable autonomous operations and fault-injection platform  
 **Domain:** Embedded-system resilience, explainable diagnostics, AI-assisted fault classification and autonomous recovery  
 **Execution:** Laptop/desktop; no physical hardware required  
-**Core:** C++17 simulator and recovery engine + Python standard-library analytics/dashboard
+**Core:** C++17 simulator and recovery engine + Python standard-library analytics/dashboard  
+**GitHub language classification:** C++ (HTML dashboard files are explicitly mapped to C++ through `.gitattributes`; the dashboard itself remains an HTML presentation layer).
 
 AIBARS is a reproducible software platform for observing a simulated embedded system, recording the pre-fault history, detecting and diagnosing faults, prioritising incidents, selecting bounded recovery actions, and verifying whether the simulated system has returned to a healthy state.
 
@@ -227,7 +228,7 @@ The server binds to `127.0.0.1` by default and is intended for local development
   --seed 20261110 --tick-delay-ms 60
 ```
 
-On Windows, use the executable under `build\Release\aibars_sim.exe` if using a Visual Studio generator. Add `--critical-fault-percent 10` to include a 10% chance per scheduled episode of selecting a critical test fault that can enter safe mode. Use `--stop-file PATH` to support controlled stop requests from a supervising process. The session ends when its monitoring-cycle limit or incident limit is reached, a critical fault enters safe mode, or the stop file appears.
+On Windows, use the executable under `build\\Release\\aibars_sim.exe` if using a Visual Studio generator. Add `--critical-fault-percent 10` to include a 10% chance per scheduled episode of selecting a critical test fault that can enter safe mode. Use `--stop-file PATH` to support controlled stop requests from a supervising process. The session ends when its monitoring-cycle limit or incident limit is reached, a critical fault enters safe mode, or the stop file appears.
 
 The autonomous session keeps one logical simulated device and global tick counter. It does not physically connect to any sensor, ECU, FPGA or industrial machine.
 
