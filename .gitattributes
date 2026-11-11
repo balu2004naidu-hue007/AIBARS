@@ -6,5 +6,6 @@
 *.md text eol=lf
 *.bat text eol=crlf
 
-# Explicit Linguist override for the root dashboard file.
-/AIBARS_DASHBOARD.html linguist-language=C++
+# Dashboards are generated presentation artifacts, not the implementation language.
+*.html linguist-detectable=false
+**/*.html linguist-detectable=false
