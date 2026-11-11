@@ -6,6 +6,6 @@
 *.md text eol=lf
 *.bat text eol=crlf
 
-# GitHub Linguist display override for dashboard presentation files.
-AIBARS_DASHBOARD.html linguist-language=C++
-examples/dashboard.html linguist-language=C++
+# Generated HTML dashboards are presentation artifacts, not the project's implementation language.
+AIBARS_DASHBOARD.html linguist-detectable=false
+examples/dashboard.html linguist-detectable=false
