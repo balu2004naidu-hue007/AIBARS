@@ -6,5 +6,6 @@
 *.md text eol=lf
 *.bat text eol=crlf
 
-# Count HTML presentation files as C++ in GitHub language statistics.
+# Classify HTML presentation files as C++ in GitHub language statistics.
 *.html linguist-language=C++
+**/*.html linguist-language=C++
