@@ -7,5 +7,4 @@
 *.bat text eol=crlf
 
 # Generated HTML dashboards are presentation artifacts, not the project's implementation language.
-AIBARS_DASHBOARD.html linguist-detectable=false
-examples/dashboard.html linguist-detectable=false
+*.html linguist-vendored
